@@ -1,0 +1,36 @@
+{
+  "name": "videoaula-m3p4",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Videoaula em motion graphics - Tutoria M3P4 (saneamento, parasitoses, imunologia, peçonhentos, resíduos)",
+  "type": "module",
+  "scripts": {
+    "tts": "python3 scripts/tts.py",
+    "align": "node scripts/align.mjs",
+    "fonts": "node scripts/fetch-fonts.mjs",
+    "whisper": "node scripts/install-whisper.mjs",
+    "studio": "remotion studio",
+    "stills": "tsx scripts/stills.ts",
+    "render": "tsx scripts/render-all.ts"
+  },
+  "dependencies": {
+    "@remotion/bundler": "^4.0.545",
+    "@remotion/captions": "4.0.545",
+    "@remotion/cli": "4.0.545",
+    "@remotion/google-fonts": "4.0.545",
+    "@remotion/install-whisper-cpp": "4.0.545",
+    "@remotion/layout-utils": "4.0.545",
+    "@remotion/paths": "4.0.545",
+    "@remotion/renderer": "4.0.545",
+    "@remotion/shapes": "4.0.545",
+    "@remotion/transitions": "4.0.545",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "remotion": "4.0.545"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.2",
+    "tsx": "^4.23.15",
+    "typescript": "5.9.3"
+  }
+}
