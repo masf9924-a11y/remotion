@@ -49,7 +49,7 @@ for (const id of MODULE_IDS) {
 if (!only) {
 	const list = path.join(outDir, 'lista.txt');
 	fs.writeFileSync(list, files.map((f) => `file '${f}'`).join('\n'));
-	const final = path.resolve('out/Videoaula-M3P4-completa.mp4');
+	const final = path.resolve('out/Videoaula-Agrotoxicos-completa.mp4');
 	execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', list, '-c', 'copy', '-movflags', '+faststart', final], {stdio: 'inherit'});
 	console.log(`FINAL → ${final}`);
 }

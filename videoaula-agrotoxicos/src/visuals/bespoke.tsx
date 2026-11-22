@@ -144,7 +144,7 @@ export const Biomag: React.FC<{v: Visual}> = ({v}) => {
 				<Trophic key={l.id} l={l} x={x0 + i * stepX} y={baseY - i * stepUp} index={i} frame={frame} accum={i === 0 ? accum : 0} />
 			))}
 			{/* rótulo biomagnificação */}
-			<div style={{position: 'absolute', left: 1500, top: 300, width: 300, opacity: springAt2(frame, chainF, 30)}}>
+			<div style={{position: 'absolute', left: 1040, top: 250, width: 320, opacity: springAt2(frame, chainF, 30)}}>
 				<div style={{fontFamily: FONT_HEAD, fontWeight: 800, fontSize: 30, color}}>↑ biomagnifica</div>
 				<div style={{fontFamily: FONT_BODY, fontSize: 22, color: C.dim, marginTop: 6, lineHeight: 1.3}}>a cada degrau, mais concentrado</div>
 			</div>
@@ -384,7 +384,7 @@ export const Landfill: React.FC<{v: Visual}> = ({v}) => {
 				{/* terreno */}
 				<rect x={110} y={GROUND} width={1700} height={260} fill="#3B2F25" opacity={0.6} />
 				<rect x={110} y={GROUND + 230} width={1700} height={40} fill="#2E86DE" opacity={0.3} />
-				<text x={130} y={GROUND + 258} fontFamily={FONT_BODY} fontWeight={600} fontSize={18} fill={C.text} opacity={0.8}>lençol freático protegido</text>
+				<text x={1180} y={GROUND + 258} fontFamily={FONT_BODY} fontWeight={600} fontSize={18} fill={C.text} opacity={0.8}>lençol freático protegido</text>
 
 				{/* camadas de impermeabilização (argila + geomembrana PEAD) */}
 				<path d={basinD} fill="none" stroke="#8a6a3a" strokeWidth={22} strokeLinejoin="round" {...evolvePath(liner, basinD)} opacity={0.9} />

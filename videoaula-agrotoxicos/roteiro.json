@@ -756,7 +756,8 @@
               "cues": [
                 {
                   "word": "endossulfam",
-                  "target": "d"
+                  "target": "d",
+                  "action": "pick"
                 }
               ]
             },
@@ -1261,7 +1262,8 @@
               "cues": [
                 {
                   "word": "rim",
-                  "target": "c"
+                  "target": "c",
+                  "action": "pick"
                 }
               ]
             },
@@ -1916,7 +1918,8 @@
               "cues": [
                 {
                   "word": "acetilcolinesterase",
-                  "target": "c"
+                  "target": "c",
+                  "action": "pick"
                 }
               ]
             },
@@ -2476,7 +2479,8 @@
               "cues": [
                 {
                   "word": "alimento",
-                  "target": "c"
+                  "target": "c",
+                  "action": "pick"
                 }
               ]
             },
@@ -2933,7 +2937,8 @@
               "cues": [
                 {
                   "word": "esperar",
-                  "target": "c"
+                  "target": "c",
+                  "action": "pick"
                 }
               ]
             },
@@ -3357,7 +3362,8 @@
               "cues": [
                 {
                   "word": "antídoto",
-                  "target": "b"
+                  "target": "b",
+                  "action": "pick"
                 }
               ]
             },
