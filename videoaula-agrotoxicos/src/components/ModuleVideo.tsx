@@ -7,11 +7,12 @@ import {AbsoluteFill, Audio, continueRender, delayRender, Sequence, staticFile} 
 import {SPRINGS} from '../springs';
 import {fontsReady} from '../theme';
 import {buildModule, TRANSITION_FRAMES, type TimedModule, type TimedScene} from '../timeline';
-import {Ascaris, Cholera, Landfill} from '../visuals/bespoke';
+import {Adipose, Biomag, ContamCycle, Landfill, Neuro} from '../visuals/bespoke';
 import {BloomPyramid, Opener, Quote} from '../visuals/basic';
 import {Cards, Profile, Stats} from '../visuals/cards';
 import {Flow} from '../visuals/flow';
 import {Quiz} from '../visuals/quiz';
+import {Flashcards} from '../visuals/review';
 import {Compare, Table} from '../visuals/table';
 import {Avatars, Background, Header} from './layers';
 import {SceneProvider} from './scene-context';
@@ -57,10 +58,16 @@ const SceneVisual: React.FC<{scene: TimedScene}> = ({scene}) => {
 			return <Compare v={v} />;
 		case 'quiz':
 			return <Quiz v={v} />;
-		case 'cholera':
-			return <Cholera v={v} />;
-		case 'ascaris':
-			return <Ascaris v={v} />;
+		case 'flashcards':
+			return <Flashcards v={v} />;
+		case 'adipose':
+			return <Adipose v={v} />;
+		case 'biomag':
+			return <Biomag v={v} />;
+		case 'neuro':
+			return <Neuro v={v} />;
+		case 'contamcycle':
+			return <ContamCycle v={v} />;
 		case 'landfill':
 			return <Landfill v={v} />;
 		default:
@@ -82,6 +89,10 @@ const FontGate: React.FC<{children: React.ReactNode}> = ({children}) => {
 
 export const ModuleVideo: React.FC<{moduleId: string}> = ({moduleId}) => {
 	const mod: TimedModule = buildModule(moduleId);
+	// intervalos absolutos de fala (para o ducking da trilha ambiente)
+	const speechIntervals: [number, number][] = mod.scenes.flatMap((scene) =>
+		scene.lines.filter((l) => l.audio !== null).map((l) => [scene.start + l.from, scene.start + l.from + l.durationInFrames] as [number, number]),
+	);
 	return (
 		<AbsoluteFill>
 			<FontGate>
@@ -121,6 +132,22 @@ export const ModuleVideo: React.FC<{moduleId: string}> = ({moduleId}) => {
 						</Sequence>
 					)),
 			)}
+			{/* Trilha ambiente bem baixa, com ducking durante as falas */}
+			<Sequence from={0} durationInFrames={mod.durationInFrames} name="ambiente">
+				<Audio
+					src={staticFile('ambient.mp3')}
+					volume={(f) => {
+						const speaking = speechIntervals.some(([a, b]) => f >= a - 4 && f <= b + 8);
+						return speaking ? 0.22 : 0.6;
+					}}
+				/>
+			</Sequence>
+			{/* Pop suave quando o conteúdo de cada cena entra */}
+			{mod.scenes.map((scene) => (
+				<Sequence key={`${scene.id}-pop`} from={scene.start + scene.lead - 4} durationInFrames={8} name={`pop ${scene.id}`}>
+					<Audio src={staticFile('sfx-pop.wav')} volume={0.28} />
+				</Sequence>
+			))}
 			{/* Efeitos: tique a cada segundo da pausa de desafio e sino na revelação */}
 			{mod.scenes.flatMap((scene) => [
 				...scene.pauses.flatMap((p) =>

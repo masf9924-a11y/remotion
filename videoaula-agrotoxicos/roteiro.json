@@ -1,69 +1,315 @@
 {
-  "title": "Tutoria M3P4 — Saneamento, parasitoses, imunologia, peçonhentos e resíduos",
+  "title": "Agrotóxicos organoclorados — toxicologia e ambiente",
   "voices": {
-    "professor": {"label": "Professor", "voice": "pt-BR-AntonioNeural", "rate": "-7%", "pitch": "-2Hz"},
-    "aluno": {"label": "Estudante", "voice": "pt-BR-FranciscaNeural", "rate": "+2%", "pitch": "+0Hz"}
+    "professor": {
+      "label": "Professor",
+      "voice": "pt-BR-AntonioNeural",
+      "rate": "-8%",
+      "pitch": "-2Hz"
+    },
+    "aluno": {
+      "label": "Estudante",
+      "voice": "pt-BR-FranciscaNeural",
+      "rate": "+0%",
+      "pitch": "+0Hz"
+    }
   },
   "modules": [
     {
       "id": "m0",
       "number": 0,
       "title": "Abertura",
-      "subtitle": "O fio que une os cinco objetivos",
+      "subtitle": "Do agente tóxico ao caso ambiental",
       "color": "#7C9CFF",
       "scenes": [
         {
           "id": "m0s1",
           "bloom": "Lembrar",
-          "visual": {"type": "opener", "kicker": "Tutoria M3P4 · Revisão para a prova", "title": "Saneamento, parasitas e peçonhentos", "subtitle": "Uma aula em degraus: do conceito ao caso clínico", "icon": "book"},
+          "visual": {
+            "type": "opener",
+            "kicker": "Toxicologia · Revisão para a prova",
+            "title": "Agrotóxicos organoclorados",
+            "subtitle": "Uma aula em degraus: do conceito de veneno ao caso ambiental",
+            "icon": "molecule"
+          },
           "lines": [
-            {"id": "m0-01", "speaker": "professor", "text": "Olá! Hoje vamos revisar a tutoria M3P4 juntos, com calma e sem pressa.", "cues": [{"word": "revisar", "target": "title"}]},
-            {"id": "m0-02", "speaker": "aluno", "text": "Que bom, porque a prova está chegando e os temas ainda estão soltos na minha cabeça.", "cues": []},
-            {"id": "m0-03", "speaker": "professor", "text": "Então vamos amarrar tudo. Um único problema liga os cinco objetivos: o ambiente sem saneamento.", "cues": [{"word": "amarrar", "target": "subtitle"}]}
+            {
+              "id": "m0-01",
+              "speaker": "professor",
+              "text": "Olá! Hoje vamos revisar os agrotóxicos organoclorados, com calma e sem pressa.",
+              "cues": [
+                {
+                  "word": "organoclorados",
+                  "target": "title"
+                }
+              ]
+            },
+            {
+              "id": "m0-02",
+              "speaker": "aluno",
+              "text": "Que bom. Esse tema mistura toxicologia, meio ambiente e saúde pública, e eu me perco.",
+              "cues": []
+            },
+            {
+              "id": "m0-03",
+              "speaker": "professor",
+              "text": "É só seguir o fio. Um mesmo veneno liga o trabalhador, o solo, a água e o alimento.",
+              "cues": [
+                {
+                  "word": "fio",
+                  "target": "subtitle"
+                }
+              ]
+            }
           ]
         },
         {
           "id": "m0s2",
           "bloom": "Lembrar",
           "visual": {
-            "type": "flow", "layout": "hub", "heading": "Mapa da aula",
+            "type": "flow",
+            "layout": "hub",
+            "heading": "Mapa da aula",
             "nodes": [
-              {"id": "hub", "label": "Ambiente sem saneamento", "sub": "água, esgoto, lixo e drenagem", "icon": "house"},
-              {"id": "o1", "label": "1 · Saneamento", "sub": "prevenção primária coletiva", "icon": "drop"},
-              {"id": "o2", "label": "2 · Doenças", "sub": "fecal-orais e dengue", "icon": "bacteria"},
-              {"id": "o3", "label": "3 · Imunologia", "sub": "Th1, Th2 e IgA", "icon": "shield"},
-              {"id": "o4", "label": "4 · Peçonhentos", "sub": "escorpião, serpentes, aranha, abelha", "icon": "scorpion"},
-              {"id": "o5", "label": "5 · Resíduos", "sub": "do saco ao aterro sanitário", "icon": "trash"}
+              {
+                "id": "hub",
+                "label": "Organoclorado",
+                "sub": "um veneno, muitos alvos",
+                "icon": "molecule"
+              },
+              {
+                "id": "o1",
+                "label": "1 · Fundamentos",
+                "sub": "agente tóxico e quais são",
+                "icon": "book"
+              },
+              {
+                "id": "o2",
+                "label": "2 · Exposição e cinética",
+                "sub": "entra, acumula, magnifica",
+                "icon": "drop"
+              },
+              {
+                "id": "o3",
+                "label": "3 · Mecanismo e intoxicação",
+                "sub": "o alvo no sistema nervoso",
+                "icon": "neuron"
+              },
+              {
+                "id": "o4",
+                "label": "4 · Determinação",
+                "sub": "como medir a exposição",
+                "icon": "magnify"
+              },
+              {
+                "id": "o5",
+                "label": "5 · Ambiente",
+                "sub": "resíduo, solo, água",
+                "icon": "globe"
+              },
+              {
+                "id": "o6",
+                "label": "6 · Caso integrador",
+                "sub": "juntar tudo (nível Criar)",
+                "icon": "target"
+              }
             ]
           },
           "lines": [
-            {"id": "m0-04", "speaker": "professor", "text": "No centro está o ambiente. Dele saem as doenças de transmissão fecal-oral e a dengue.", "cues": [{"word": "centro", "target": "hub"}, {"word": "doenças", "target": "o2"}]},
-            {"id": "m0-05", "speaker": "professor", "text": "Depois vem a resposta do corpo, ou seja, a imunologia contra parasitas.", "cues": [{"word": "imunologia", "target": "o3"}]},
-            {"id": "m0-06", "speaker": "aluno", "text": "E os escorpiões e as cobras? Eles entram nessa história também?", "cues": []},
-            {"id": "m0-07", "speaker": "professor", "text": "Entram, sim. O lixo atrai baratas e ratos, que são alimento de escorpiões e serpentes.", "cues": [{"word": "lixo", "target": "o5"}, {"word": "escorpiões", "target": "o4"}]},
-            {"id": "m0-08", "speaker": "professor", "text": "E tudo começa pelo saneamento básico, que é onde a prevenção acontece.", "cues": [{"word": "saneamento", "target": "o1"}]}
+            {
+              "id": "m0-04",
+              "speaker": "professor",
+              "text": "No centro está o organoclorado. Dele saem seis blocos, que são os nossos objetivos.",
+              "cues": [
+                {
+                  "word": "centro",
+                  "target": "hub"
+                },
+                {
+                  "word": "seis",
+                  "target": "o1"
+                }
+              ]
+            },
+            {
+              "id": "m0-05",
+              "speaker": "professor",
+              "text": "Primeiro os fundamentos, depois como ele entra no corpo e se acumula.",
+              "cues": [
+                {
+                  "word": "fundamentos",
+                  "target": "o1"
+                },
+                {
+                  "word": "entra",
+                  "target": "o2"
+                }
+              ]
+            },
+            {
+              "id": "m0-06",
+              "speaker": "aluno",
+              "text": "E o mecanismo? É a parte que mais me preocupa na prova.",
+              "cues": [
+                {
+                  "word": "mecanismo",
+                  "target": "o3"
+                }
+              ]
+            },
+            {
+              "id": "m0-07",
+              "speaker": "professor",
+              "text": "É o coração da aula. Depois vêm os métodos de medir a exposição e o lado ambiental.",
+              "cues": [
+                {
+                  "word": "coração",
+                  "target": "o3"
+                },
+                {
+                  "word": "métodos",
+                  "target": "o4"
+                },
+                {
+                  "word": "ambiental",
+                  "target": "o5"
+                }
+              ]
+            },
+            {
+              "id": "m0-08",
+              "speaker": "professor",
+              "text": "E no fim juntamos tudo num caso de uma comunidade rural contaminada.",
+              "cues": [
+                {
+                  "word": "caso",
+                  "target": "o6"
+                }
+              ]
+            }
           ]
         },
         {
           "id": "m0s3",
           "bloom": "Lembrar",
           "visual": {
-            "type": "bloom", "heading": "Taxonomia de Bloom: os degraus da aula",
+            "type": "bloom",
+            "heading": "Bloom: nem todo objetivo pesa igual",
             "levels": [
-              {"id": "l1", "label": "Lembrar", "sub": "definições e listas"},
-              {"id": "l2", "label": "Compreender", "sub": "mecanismos"},
-              {"id": "l3", "label": "Aplicar", "sub": "condutas"},
-              {"id": "l4", "label": "Analisar", "sub": "diferenciar quadros"},
-              {"id": "l5", "label": "Avaliar", "sub": "julgar medidas"},
-              {"id": "l6", "label": "Criar", "sub": "mapa integrado"}
+              {
+                "id": "b1",
+                "label": "Lembrar",
+                "sub": "identificar, listar, definir"
+              },
+              {
+                "id": "b2",
+                "label": "Compreender",
+                "sub": "reconhecer, caracterizar"
+              },
+              {
+                "id": "b3",
+                "label": "Aplicar",
+                "sub": "usar em um contexto"
+              },
+              {
+                "id": "b4",
+                "label": "Analisar",
+                "sub": "explicar o porquê"
+              },
+              {
+                "id": "b5",
+                "label": "Avaliar",
+                "sub": "julgar, decidir"
+              },
+              {
+                "id": "b6",
+                "label": "Criar",
+                "sub": "integrar no caso"
+              }
             ]
           },
           "lines": [
-            {"id": "m0-09", "speaker": "professor", "text": "Vamos estudar em degraus, seguindo a taxonomia de Bloom.", "cues": [{"word": "degraus", "target": "pyramid"}]},
-            {"id": "m0-10", "speaker": "professor", "text": "Primeiro, lembrar e compreender. Depois, aplicar e analisar.", "cues": [{"word": "lembrar", "target": "l1"}, {"word": "compreender", "target": "l2"}, {"word": "aplicar", "target": "l3"}, {"word": "analisar", "target": "l4"}]},
-            {"id": "m0-11", "speaker": "professor", "text": "No fim, avaliar medidas e criar um raciocínio clínico integrado.", "cues": [{"word": "avaliar", "target": "l5"}, {"word": "criar", "target": "l6"}]},
-            {"id": "m0-12", "speaker": "aluno", "text": "E vai ter questão de prova no meio?", "cues": []},
-            {"id": "m0-13", "speaker": "professor", "text": "Vai. Em cada módulo aparece um desafio. Quando o relógio surgir, pense e responda antes de mim.", "cues": [{"word": "relógio", "target": "clock"}]}
+            {
+              "id": "m0-09",
+              "speaker": "professor",
+              "text": "Repare no verbo de cada objetivo. Ele diz quanto aquilo pesa na prova.",
+              "cues": [
+                {
+                  "word": "verbo",
+                  "target": "pyramid"
+                }
+              ]
+            },
+            {
+              "id": "m0-10",
+              "speaker": "professor",
+              "text": "Identificar e listar são a base: importantes, mas rápidos.",
+              "cues": [
+                {
+                  "word": "Identificar",
+                  "target": "b1"
+                }
+              ]
+            },
+            {
+              "id": "m0-11",
+              "speaker": "professor",
+              "text": "Já caracterizar e explicar o mecanismo estão no topo. É neles que passamos mais tempo.",
+              "cues": [
+                {
+                  "word": "caracterizar",
+                  "target": "b4"
+                }
+              ]
+            },
+            {
+              "id": "m0-12",
+              "speaker": "aluno",
+              "text": "Então eu estudo mais o que pede para explicar, e menos o que só pede para listar.",
+              "cues": [
+                {
+                  "word": "explicar",
+                  "target": "clock"
+                }
+              ]
+            },
+            {
+              "id": "m0-13",
+              "speaker": "professor",
+              "text": "Exatamente. A cada pausa, você responde antes de mim. Vamos começar.",
+              "cues": []
+            },
+            {
+              "id": "m0-13b",
+              "speaker": "aluno",
+              "text": "Combinado. Vou tentar responder cada desafio antes de você.",
+              "cues": []
+            }
+          ]
+        },
+        {
+          "id": "m0s4",
+          "bloom": "Lembrar",
+          "visual": {
+            "type": "quote",
+            "text": "É a dose que faz o veneno. Toda a toxicologia nasce dessa frase.",
+            "highlights": [
+              "dose",
+              "veneno"
+            ]
+          },
+          "lines": [
+            {
+              "id": "m0-14",
+              "speaker": "professor",
+              "text": "Guarde a frase-chave da abertura: é a dose que faz o veneno.",
+              "cues": [
+                {
+                  "word": "dose",
+                  "target": "quote"
+                }
+              ]
+            }
           ]
         }
       ]
@@ -71,192 +317,591 @@
     {
       "id": "m1",
       "number": 1,
-      "title": "Saneamento básico",
-      "subtitle": "Prevenção primária coletiva",
-      "color": "#2EC4B6",
+      "title": "Fundamentos",
+      "subtitle": "Agente tóxico e quais são os clorados",
+      "color": "#5AC8FA",
       "scenes": [
         {
           "id": "m1s1",
           "bloom": "Lembrar",
-          "visual": {"type": "opener", "kicker": "Módulo 1", "title": "Saneamento básico", "subtitle": "Interrompe a transmissão no ambiente, antes de a pessoa adoecer", "icon": "drop"},
+          "visual": {
+            "type": "cards",
+            "heading": "O que é um agente tóxico?",
+            "badge": "Objetivo 6 · Definir",
+            "columns": 3,
+            "items": [
+              {
+                "id": "c1",
+                "title": "Agente tóxico",
+                "body": "Substância que, ao interagir com o corpo, pode causar dano.",
+                "icon": "flask",
+                "tag": "definição"
+              },
+              {
+                "id": "c2",
+                "title": "Depende de 4 fatores",
+                "body": "Dose, via, tempo de contato e suscetibilidade do indivíduo.",
+                "icon": "scale",
+                "tag": "o que modula"
+              },
+              {
+                "id": "c3",
+                "title": "Xenobiótico",
+                "body": "Estranho ao organismo. Vira tóxico conforme a exposição.",
+                "icon": "molecule",
+                "tag": "conceito"
+              }
+            ],
+            "chips": [
+              {
+                "id": "ch1",
+                "text": "Não existe substância inócua: existe dose segura"
+              }
+            ]
+          },
           "lines": [
-            {"id": "m1-01", "speaker": "professor", "text": "Módulo um: saneamento básico. A ideia central é simples.", "cues": [{"word": "saneamento", "target": "title"}]},
-            {"id": "m1-02", "speaker": "professor", "text": "Saneamento é prevenção primária coletiva. Ele interrompe a transmissão no ambiente, antes de a pessoa adoecer.", "cues": [{"word": "interrompe", "target": "subtitle"}]}
+            {
+              "id": "m1-01",
+              "speaker": "professor",
+              "text": "Antes de falar do clorado, precisamos definir agente tóxico.",
+              "cues": [
+                {
+                  "word": "tóxico",
+                  "target": "__heading"
+                }
+              ]
+            },
+            {
+              "id": "m1-02",
+              "speaker": "professor",
+              "text": "É toda substância que, ao interagir com o corpo, pode causar dano.",
+              "cues": [
+                {
+                  "word": "substância",
+                  "target": "c1"
+                }
+              ]
+            },
+            {
+              "id": "m1-03",
+              "speaker": "professor",
+              "text": "Mas o dano depende de quatro fatores: dose, via, tempo e suscetibilidade.",
+              "cues": [
+                {
+                  "word": "quatro",
+                  "target": "c2"
+                }
+              ]
+            },
+            {
+              "id": "m1-04",
+              "speaker": "aluno",
+              "text": "Então a mesma substância pode ser remédio ou veneno, dependendo da dose?",
+              "cues": [
+                {
+                  "word": "substância",
+                  "target": "c3"
+                }
+              ]
+            },
+            {
+              "id": "m1-05",
+              "speaker": "professor",
+              "text": "Isso. Não existe substância inócua: existe dose segura.",
+              "cues": [
+                {
+                  "word": "inócua",
+                  "target": "ch1"
+                }
+              ]
+            }
           ]
         },
         {
           "id": "m1s2",
-          "bloom": "Lembrar",
+          "bloom": "Compreender",
           "visual": {
-            "type": "cards", "heading": "Os 4 eixos do saneamento", "columns": 4,
-            "badge": "Lei 11.445/2007 · atualizada pela Lei 14.026/2020",
+            "type": "cards",
+            "heading": "Agrotóxicos clorados: a família",
+            "badge": "Objetivo 1 · Identificar",
+            "columns": 3,
             "items": [
-              {"id": "agua", "title": "Água potável", "body": "Abastecimento: captação, tratamento e distribuição", "icon": "drop"},
-              {"id": "esgoto", "title": "Esgotamento sanitário", "body": "Coleta, transporte e tratamento do esgoto", "icon": "pipe"},
-              {"id": "residuos", "title": "Resíduos sólidos", "body": "Limpeza urbana e manejo do lixo", "icon": "trash"},
-              {"id": "drenagem", "title": "Drenagem pluvial", "body": "Manejo das águas da chuva; evita enchentes", "icon": "rain"}
+              {
+                "id": "d1",
+                "title": "Difeniletanos",
+                "body": "DDT e o metabólito DDE. O clássico contra a malária.",
+                "icon": "bug",
+                "tag": "grupo",
+                "swatch": "#FF5C7A"
+              },
+              {
+                "id": "d2",
+                "title": "Ciclodienos",
+                "body": "Aldrin, dieldrin, endrin, clordano, heptacloro, mirex.",
+                "icon": "molecule",
+                "tag": "grupo",
+                "swatch": "#FFB703"
+              },
+              {
+                "id": "d3",
+                "title": "Hexaclorocicloexanos",
+                "body": "HCH e o isômero ativo, o lindano.",
+                "icon": "flask",
+                "tag": "grupo",
+                "swatch": "#3DDC97"
+              }
+            ],
+            "chips": [
+              {
+                "id": "ch2",
+                "text": "Endossulfam: ciclodieno, o último a ser banido"
+              }
             ]
           },
           "lines": [
-            {"id": "m1-03", "speaker": "professor", "text": "A lei do saneamento, de 2007, atualizada pelo novo marco legal de 2020, define quatro eixos.", "cues": [{"word": "lei", "target": "badge"}]},
-            {"id": "m1-04", "speaker": "professor", "text": "O primeiro é o abastecimento de água potável. O segundo, o esgotamento sanitário.", "cues": [{"word": "abastecimento", "target": "agua"}, {"word": "esgotamento", "target": "esgoto"}]},
-            {"id": "m1-05", "speaker": "aluno", "text": "Então saneamento é só água e esgoto?", "cues": []},
-            {"id": "m1-06", "speaker": "professor", "text": "Esse é um erro comum. Também entram a limpeza urbana, com o manejo dos resíduos sólidos, e a drenagem das águas da chuva.", "cues": [{"word": "limpeza", "target": "residuos"}, {"word": "drenagem", "target": "drenagem"}]}
+            {
+              "id": "m1-06",
+              "speaker": "professor",
+              "text": "Os organoclorados se dividem em três grandes grupos.",
+              "cues": [
+                {
+                  "word": "três",
+                  "target": "__heading"
+                }
+              ]
+            },
+            {
+              "id": "m1-07",
+              "speaker": "professor",
+              "text": "Os difeniletanos, como o dê-dê-tê e seu metabólito dê-dê-é.",
+              "cues": [
+                {
+                  "word": "difeniletanos",
+                  "target": "d1"
+                }
+              ]
+            },
+            {
+              "id": "m1-08",
+              "speaker": "professor",
+              "text": "Os ciclodienos: aldrin, dieldrin, endrin, clordano, heptacloro e mirex.",
+              "cues": [
+                {
+                  "word": "ciclodienos",
+                  "target": "d2"
+                }
+              ]
+            },
+            {
+              "id": "m1-09",
+              "speaker": "professor",
+              "text": "E os hexaclorocicloexanos, o agá-cê-agá, cujo isômero ativo é o lindano.",
+              "cues": [
+                {
+                  "word": "hexaclorocicloexanos",
+                  "target": "d3"
+                }
+              ]
+            },
+            {
+              "id": "m1-10",
+              "speaker": "aluno",
+              "text": "E o endossulfam? Ouço muito esse nome.",
+              "cues": [
+                {
+                  "word": "endossulfam",
+                  "target": "ch2"
+                }
+              ]
+            },
+            {
+              "id": "m1-11",
+              "speaker": "professor",
+              "text": "É um ciclodieno, e foi o último a cair, em dois mil e treze.",
+              "cues": [
+                {
+                  "word": "último",
+                  "target": "ch2"
+                }
+              ]
+            }
           ]
         },
         {
           "id": "m1s3",
           "bloom": "Compreender",
           "visual": {
-            "type": "stats", "heading": "Metas do Novo Marco Legal até 31/12/2033",
-            "items": [
-              {"id": "s99", "value": 99, "suffix": "%", "label": "da população com água potável", "icon": "drop"},
-              {"id": "s90", "value": 90, "suffix": "%", "label": "com coleta e tratamento de esgoto", "icon": "pipe"}
+            "type": "table",
+            "heading": "Situação no Brasil: quase tudo proibido",
+            "columns": [
+              "Composto",
+              "Situação",
+              "Base legal"
+            ],
+            "rows": [
+              {
+                "id": "r1",
+                "cells": [
+                  "DDT",
+                  "Proibido (todos os usos)",
+                  "Lei 11.936/2009"
+                ]
+              },
+              {
+                "id": "r2",
+                "cells": [
+                  "Lindano / HCH",
+                  "Proibido",
+                  "RDC Anvisa 165/2006"
+                ]
+              },
+              {
+                "id": "r3",
+                "cells": [
+                  "Aldrin, dieldrin, endrin",
+                  "Proibidos",
+                  "Portaria MAPA 329/1985"
+                ]
+              },
+              {
+                "id": "r4",
+                "cells": [
+                  "Clordano, heptacloro, mirex",
+                  "Proibidos",
+                  "Portaria MAPA 329/1985"
+                ]
+              },
+              {
+                "id": "r5",
+                "cells": [
+                  "Endossulfam",
+                  "Banido desde 2013",
+                  "RDC Anvisa 28/2010"
+                ]
+              }
             ],
             "chips": [
-              {"id": "chip1", "text": "Lei 8.080/90: saneamento é determinante social da saúde"},
-              {"id": "chip2", "text": "CF/88, art. 200, IV: o SUS participa das ações de saneamento"}
+              {
+                "id": "ch3",
+                "text": "Hoje o problema é o resíduo que ficou, não o uso"
+              }
             ]
           },
           "lines": [
-            {"id": "m1-07", "speaker": "professor", "text": "O marco legal fixou metas até o fim de 2033.", "cues": []},
-            {"id": "m1-08", "speaker": "professor", "text": "Noventa e nove por cento da população com água potável, e noventa por cento com coleta e tratamento de esgoto.", "cues": [{"word": "população", "target": "s99"}, {"word": "coleta", "target": "s90"}]},
-            {"id": "m1-09", "speaker": "aluno", "text": "E onde entra o SUS nisso? Parece assunto só de engenharia.", "cues": []},
-            {"id": "m1-10", "speaker": "professor", "text": "A Lei 8.080 coloca o saneamento como determinante social da saúde. E a Constituição diz que o SUS participa das ações de saneamento.", "cues": [{"word": "determinante", "target": "chip1"}, {"word": "Constituição", "target": "chip2"}]}
+            {
+              "id": "m1-12",
+              "speaker": "professor",
+              "text": "Agora a parte que mais cai: a situação regulatória.",
+              "cues": [
+                {
+                  "word": "regulatória",
+                  "target": "__heading"
+                }
+              ]
+            },
+            {
+              "id": "m1-13",
+              "speaker": "professor",
+              "text": "O dê-dê-tê tem lei própria, a onze mil novecentos e trinta e seis, de dois mil e nove.",
+              "cues": [
+                {
+                  "word": "própria",
+                  "target": "r1"
+                },
+                {
+                  "word": "lei",
+                  "target": "r1"
+                }
+              ]
+            },
+            {
+              "id": "m1-14",
+              "speaker": "professor",
+              "text": "O lindano caiu em dois mil e seis, pela Anvisa.",
+              "cues": [
+                {
+                  "word": "lindano",
+                  "target": "r2"
+                }
+              ]
+            },
+            {
+              "id": "m1-15",
+              "speaker": "professor",
+              "text": "Os ciclodienos vêm da portaria da Agricultura de mil novecentos e oitenta e cinco.",
+              "cues": [
+                {
+                  "word": "portaria",
+                  "target": "r3"
+                },
+                {
+                  "word": "oitenta",
+                  "target": "r4"
+                }
+              ]
+            },
+            {
+              "id": "m1-16",
+              "speaker": "professor",
+              "text": "E o endossulfam foi banido em dois mil e treze.",
+              "cues": [
+                {
+                  "word": "endossulfam",
+                  "target": "r5"
+                }
+              ]
+            },
+            {
+              "id": "m1-17",
+              "speaker": "aluno",
+              "text": "Então quase nada é permitido hoje?",
+              "cues": []
+            },
+            {
+              "id": "m1-18",
+              "speaker": "professor",
+              "text": "Praticamente nada. Hoje o problema é o resíduo que ficou, não o uso.",
+              "cues": [
+                {
+                  "word": "resíduo",
+                  "target": "ch3"
+                }
+              ]
+            },
+            {
+              "id": "m1-18b",
+              "speaker": "professor",
+              "text": "Tudo isso conversa com a Convenção de Estocolmo, que trata dos poluentes orgânicos persistentes.",
+              "cues": []
+            },
+            {
+              "id": "m1-18c",
+              "speaker": "aluno",
+              "text": "Os famosos pôps?",
+              "cues": []
+            },
+            {
+              "id": "m1-18d",
+              "speaker": "professor",
+              "text": "Isso, os pôps. O Brasil assinou e promulgou essa convenção em dois mil e cinco.",
+              "cues": []
+            }
           ]
         },
         {
           "id": "m1s4",
           "bloom": "Compreender",
           "visual": {
-            "type": "table", "heading": "Doenças relacionadas ao saneamento ambiental inadequado (DRSAI)",
-            "columns": ["Grupo", "Exemplos"],
-            "rows": [
-              {"id": "r1", "cells": ["1 · Feco-oral", "diarreias, cólera, giardíase, hepatite A"]},
-              {"id": "r2", "cells": ["2 · Inseto vetor", "dengue, zika, chikungunya, malária"]},
-              {"id": "r3", "cells": ["3 · Contato com a água", "leptospirose, esquistossomose"]},
-              {"id": "r4", "cells": ["4 · Higiene", "tracoma, conjuntivites, micoses superficiais"]},
-              {"id": "r5", "cells": ["5 · Geo-helmintos e teníases", "ascaridíase, ancilostomíase, teníase"]}
-            ]
+            "type": "quiz",
+            "level": "Compreender",
+            "question": "Qual organoclorado tem lei federal específica proibindo todos os seus usos no Brasil?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Lindano"
+              },
+              {
+                "id": "b",
+                "text": "DDT"
+              },
+              {
+                "id": "c",
+                "text": "Aldrin"
+              },
+              {
+                "id": "d",
+                "text": "Endossulfam"
+              }
+            ],
+            "correct": "b",
+            "explanation": "O DDT é proibido pela Lei 11.936/2009; os outros caíram por atos da Anvisa ou do MAPA."
           },
           "lines": [
-            {"id": "m1-11", "speaker": "professor", "text": "As doenças ligadas ao saneamento inadequado se dividem em cinco grupos.", "cues": []},
-            {"id": "m1-12", "speaker": "professor", "text": "Primeiro, as de transmissão feco-oral, como diarreias, cólera e giardíase. Segundo, as transmitidas por inseto vetor, como a dengue.", "cues": [{"word": "diarreias", "target": "r1"}, {"word": "vetor", "target": "r2"}]},
-            {"id": "m1-13", "speaker": "professor", "text": "Terceiro, as de contato com a água, como leptospirose e esquistossomose. Quarto, as ligadas à higiene, como tracoma e micoses.", "cues": [{"word": "contato", "target": "r3"}, {"word": "higiene", "target": "r4"}]},
-            {"id": "m1-14", "speaker": "professor", "text": "E quinto, os geo-helmintos e as teníases, como a ascaridíase.", "cues": [{"word": "quinto", "target": "r5"}]}
+            {
+              "id": "m1-19",
+              "speaker": "professor",
+              "text": "Primeiro desafio. Qual clorado tem uma lei federal só para ele?",
+              "cues": [
+                {
+                  "word": "desafio",
+                  "target": "__tag"
+                },
+                {
+                  "word": "clorado",
+                  "target": "question"
+                }
+              ]
+            },
+            {
+              "id": "m1-20",
+              "speaker": "professor",
+              "text": "Leia as quatro alternativas e escolha antes do relógio zerar.",
+              "cues": [
+                {
+                  "word": "alternativas",
+                  "target": "options"
+                }
+              ]
+            },
+            {
+              "id": "m1-pause",
+              "speaker": "pausa",
+              "pauseMs": 7000,
+              "cues": []
+            },
+            {
+              "id": "m1-21",
+              "speaker": "aluno",
+              "text": "Eu vou de endossulfam, porque foi o mais recente a ser banido.",
+              "cues": [
+                {
+                  "word": "endossulfam",
+                  "target": "d"
+                }
+              ]
+            },
+            {
+              "id": "m1-22",
+              "speaker": "professor",
+              "text": "Raciocínio bom, mas o endossulfam caiu por resolução da Anvisa, não por lei.",
+              "cues": []
+            },
+            {
+              "id": "m1-23",
+              "speaker": "professor",
+              "text": "A resposta é o dê-dê-tê, único com lei própria, a de dois mil e nove.",
+              "cues": [
+                {
+                  "word": "resposta",
+                  "target": "answer"
+                },
+                {
+                  "word": "própria",
+                  "target": "explanation"
+                }
+              ]
+            }
           ]
         },
         {
           "id": "m1s5",
-          "bloom": "Compreender",
+          "bloom": "Lembrar",
           "visual": {
-            "type": "flow", "layout": "row", "heading": "Por que o poço raso se contamina",
-            "hero": {"title": "Poço raso + fossa rudimentar", "body": "usam o mesmo lençol freático"},
-            "nodes": [
-              {"id": "fossa", "label": "Fossa rudimentar", "sub": "sem impermeabilização", "icon": "pipe"},
-              {"id": "solo", "label": "Infiltração", "sub": "fezes atravessam o solo", "icon": "arrowdown"},
-              {"id": "lencol", "label": "Lençol freático", "sub": "água subterrânea", "icon": "drop"},
-              {"id": "poco", "label": "Poço raso", "sub": "capta a mesma água", "icon": "house"},
-              {"id": "ecoli", "label": "E. coli na água", "sub": "indicador fecal · ausente em 100 mL (Portaria GM/MS 888/2021)", "icon": "bacteria"}
+            "type": "flashcards",
+            "heading": "Flashcards relâmpago",
+            "cards": [
+              {
+                "id": "f1",
+                "q": "4 fatores que modulam a toxicidade?",
+                "a": "Dose, via, tempo e suscetibilidade"
+              },
+              {
+                "id": "f2",
+                "q": "Os 3 grupos de organoclorados?",
+                "a": "Difeniletanos, ciclodienos e HCH"
+              },
+              {
+                "id": "f3",
+                "q": "Metabólito persistente do DDT?",
+                "a": "DDE"
+              }
             ]
           },
           "lines": [
-            {"id": "m1-15", "speaker": "aluno", "text": "Professor, na minha UBS muita gente tem poço no quintal. Isso é perigoso?", "cues": [{"word": "poço", "target": "hero"}]},
-            {"id": "m1-16", "speaker": "professor", "text": "Depende de onde fica a fossa. A fossa rudimentar infiltra fezes no solo.", "cues": [{"word": "rudimentar", "target": "fossa"}, {"word": "solo", "target": "solo"}]},
-            {"id": "m1-17", "speaker": "professor", "text": "Esse líquido chega ao lençol freático, que é a mesma água que o poço raso puxa.", "cues": [{"word": "lençol", "target": "lencol"}, {"word": "raso", "target": "poco"}]},
-            {"id": "m1-18", "speaker": "professor", "text": "Por isso pesquisamos a Escherichia coli. Ela é indicadora de contaminação fecal, e a portaria de potabilidade exige ausência em cem mililitros.", "cues": [{"word": "indicadora", "target": "ecoli"}]},
-            {"id": "m1-19", "speaker": "aluno", "text": "Então a coli é a causa das diarreias da comunidade?", "cues": []},
-            {"id": "m1-20", "speaker": "professor", "text": "Não necessariamente. Ela indica que há fezes na água; os agentes da diarreia podem ser outros, como vírus, Giardia ou o vibrião da cólera.", "cues": [{"word": "indica", "target": "ecoli", "action": "highlight"}]}
+            {
+              "id": "m1-24",
+              "speaker": "professor",
+              "text": "Três cartões rápidos. Quais são os quatro fatores da toxicidade?",
+              "cues": [
+                {
+                  "word": "quatro",
+                  "target": "f1"
+                }
+              ]
+            },
+            {
+              "id": "m1-25",
+              "speaker": "professor",
+              "text": "Dose, via, tempo e suscetibilidade.",
+              "cues": [
+                {
+                  "word": "Dose",
+                  "target": "f1",
+                  "action": "solve"
+                }
+              ]
+            },
+            {
+              "id": "m1-26",
+              "speaker": "professor",
+              "text": "Os três grupos de clorados?",
+              "cues": [
+                {
+                  "word": "grupos",
+                  "target": "f2"
+                }
+              ]
+            },
+            {
+              "id": "m1-27",
+              "speaker": "professor",
+              "text": "Difeniletanos, ciclodienos e agá-cê-agá.",
+              "cues": [
+                {
+                  "word": "Difeniletanos",
+                  "target": "f2",
+                  "action": "solve"
+                }
+              ]
+            },
+            {
+              "id": "m1-28",
+              "speaker": "professor",
+              "text": "E o metabólito persistente do dê-dê-tê?",
+              "cues": [
+                {
+                  "word": "metabólito",
+                  "target": "f3"
+                }
+              ]
+            },
+            {
+              "id": "m1-29",
+              "speaker": "professor",
+              "text": "A resposta é o dê-dê-é.",
+              "cues": [
+                {
+                  "word": "resposta",
+                  "target": "f3",
+                  "action": "solve"
+                }
+              ]
+            }
           ]
         },
         {
           "id": "m1s6",
           "bloom": "Compreender",
           "visual": {
-            "type": "flow", "layout": "cycle", "heading": "A diarreia mata por desidratação e por desnutrição",
-            "chips": [{"id": "dehyd", "text": "Aguda: desidratação"}, {"id": "desnut", "text": "Lenta: desnutrição"}],
-            "nodes": [
-              {"id": "infeccao", "label": "Infecção", "sub": "água e mãos contaminadas", "icon": "bacteria"},
-              {"id": "diarreia", "label": "Diarreia", "sub": "perda de água e nutrientes", "icon": "drop"},
-              {"id": "desnutricao", "label": "Desnutrição", "sub": "má absorção, menos ingestão", "icon": "child"},
-              {"id": "defesa", "label": "Defesa enfraquecida", "sub": "imunidade e barreira intestinal", "icon": "shield"}
+            "type": "quote",
+            "text": "Organoclorado no Brasil é passado proibido com presente residual.",
+            "highlights": [
+              "proibido",
+              "residual"
             ]
           },
           "lines": [
-            {"id": "m1-21", "speaker": "professor", "text": "Agora, mortalidade infantil. A diarreia mata de duas formas: por desidratação, de forma aguda, e por desnutrição, de forma lenta.", "cues": [{"word": "desidratação", "target": "dehyd"}, {"word": "desnutrição", "target": "desnut"}]},
-            {"id": "m1-22", "speaker": "professor", "text": "A desnutrição forma um círculo vicioso. A infecção causa diarreia, e a diarreia leva à desnutrição.", "cues": [{"word": "infecção", "target": "infeccao"}, {"word": "diarreia", "target": "diarreia"}, {"word": "desnutrição", "n": 2, "target": "desnutricao"}]},
-            {"id": "m1-23", "speaker": "professor", "text": "Desnutrida, a criança fica com a defesa enfraquecida, e vem uma nova infecção.", "cues": [{"word": "defesa", "target": "defesa"}, {"word": "nova", "target": "infeccao", "action": "highlight"}]}
-          ]
-        },
-        {
-          "id": "m1s7",
-          "bloom": "Compreender",
-          "visual": {
-            "type": "compare", "heading": "Qual mortalidade infantil o saneamento reduz?",
-            "left": {"id": "left", "title": "Neonatal", "sub": "0 a 27 dias", "color": "#8EA3C7", "items": [
-              {"id": "l1", "text": "Depende de pré-natal e assistência ao parto"},
-              {"id": "l2", "text": "Prematuridade, asfixia, infecções perinatais"}
-            ]},
-            "right": {"id": "right", "title": "Pós-neonatal", "sub": "28 a 364 dias", "color": "#2EC4B6", "items": [
-              {"id": "r1", "text": "Mais sensível ao ambiente e ao saneamento"},
-              {"id": "r2", "text": "Diarreia, pneumonia e desnutrição"}
-            ]}
-          },
-          "lines": [
-            {"id": "m1-24", "speaker": "aluno", "text": "E o saneamento reduz qualquer morte infantil?", "cues": []},
-            {"id": "m1-25", "speaker": "professor", "text": "Reduz principalmente a mortalidade pós-neonatal, de vinte e oito a trezentos e sessenta e quatro dias, quando a criança mais se expõe ao ambiente.", "cues": [{"word": "pós-neonatal", "target": "right"}, {"word": "ambiente", "target": "r1"}]},
-            {"id": "m1-26", "speaker": "professor", "text": "Nessa fase pesam a diarreia, a pneumonia e a desnutrição. Já a neonatal depende mais do pré-natal e da assistência ao parto.", "cues": [{"word": "pneumonia", "target": "r2"}, {"word": "neonatal", "target": "left"}, {"word": "parto", "target": "l1"}, {"word": "parto", "target": "l2"}]}
-          ]
-        },
-        {
-          "id": "m1s8",
-          "bloom": "Aplicar",
-          "visual": {
-            "type": "table", "heading": "Diarreia na criança: planos de hidratação",
-            "columns": ["Plano", "Situação", "Conduta"],
-            "rows": [
-              {"id": "rA", "cells": ["A", "Sem desidratação", "Domicílio: soro oral após cada evacuação, mais líquidos, zinco, manter a alimentação"]},
-              {"id": "rB", "cells": ["B", "Com desidratação", "Unidade de saúde: terapia de reidratação oral e reavaliação"]},
-              {"id": "rC", "cells": ["C", "Desidratação grave", "Hidratação venosa imediata"]}
-            ],
-            "chips": [{"id": "zinco", "text": "Zinco por 10 a 14 dias: menor duração e recorrência"}]
-          },
-          "lines": [
-            {"id": "m1-27", "speaker": "professor", "text": "E o tratamento da diarreia na criança segue três planos.", "cues": []},
-            {"id": "m1-28", "speaker": "professor", "text": "Plano A: sem desidratação, em casa, com soro oral após cada evacuação, zinco e alimentação mantida.", "cues": [{"word": "casa", "target": "rA"}]},
-            {"id": "m1-29", "speaker": "professor", "text": "Plano B: com desidratação, a reidratação oral é feita na unidade, com reavaliação. Plano C: desidratação grave, hidratação venosa.", "cues": [{"word": "unidade", "target": "rB"}, {"word": "venosa", "target": "rC"}]},
-            {"id": "m1-30", "speaker": "aluno", "text": "Mas, se a criança está com diarreia, não é melhor suspender a comida?", "cues": []},
-            {"id": "m1-31", "speaker": "professor", "text": "Não. Manter a alimentação evita piorar a desnutrição. E o zinco, por dez a quatorze dias, reduz a duração e a recorrência.", "cues": [{"word": "alimentação", "target": "rA", "action": "highlight"}, {"word": "zinco", "target": "zinco"}]}
-          ]
-        },
-        {
-          "id": "m1s9",
-          "bloom": "Aplicar",
-          "visual": {
-            "type": "quiz", "level": "Aplicar",
-            "question": "Criança de 10 meses, diarreia há 2 dias, olhos fundos, bebe com avidez e prega cutânea que desaparece lentamente. Sem letargia. Qual a conduta?",
-            "options": [
-              {"id": "a", "text": "Plano A: soro oral em casa"},
-              {"id": "b", "text": "Plano B: reidratação oral na unidade"},
-              {"id": "c", "text": "Plano C: hidratação venosa"},
-              {"id": "d", "text": "Suspender a dieta e iniciar antibiótico"}
-            ],
-            "correct": "b",
-            "explanation": "Sinais de desidratação (olhos fundos, sede, prega lenta) sem sinais de gravidade (letargia, incapacidade de beber) = Plano B."
-          },
-          "lines": [
-            {"id": "m1-32", "speaker": "professor", "text": "Hora do desafio. Uma criança de dez meses tem diarreia, olhos fundos, bebe com avidez, e a prega cutânea volta lentamente. Qual plano?", "cues": [{"word": "desafio", "target": "question"}, {"word": "Qual", "target": "options"}]},
-            {"id": "m1-q1", "speaker": "pausa", "text": "", "pauseMs": 7000, "cues": []},
-            {"id": "m1-33", "speaker": "aluno", "text": "Eu iria direto para o plano C, porque ela está desidratada.", "cues": [{"word": "plano", "target": "c", "action": "pick"}]},
-            {"id": "m1-34", "speaker": "professor", "text": "Quase. Ela tem desidratação, mas sem sinais de gravidade, como letargia ou incapacidade de beber. Então é plano B, na unidade.", "cues": [{"word": "gravidade", "target": "explanation"}, {"word": "plano", "target": "answer"}]}
-          ]
-        },
-        {
-          "id": "m1s10",
-          "bloom": "Compreender",
-          "visual": {"type": "quote", "text": "Tratar a diarreia resolve o episódio; só o saneamento resolve a causa.", "highlights": ["episódio", "saneamento", "causa"]},
-          "lines": [
-            {"id": "m1-35", "speaker": "professor", "text": "Guarde esta frase: tratar a diarreia resolve o episódio; só o saneamento resolve a causa.", "cues": [{"word": "Guarde", "target": "quote"}]}
+            {
+              "id": "m1-30",
+              "speaker": "professor",
+              "text": "Frase-chave do módulo: organoclorado é passado proibido com presente residual.",
+              "cues": [
+                {
+                  "word": "proibido",
+                  "target": "quote"
+                }
+              ]
+            }
           ]
         }
       ]
@@ -264,217 +909,504 @@
     {
       "id": "m2",
       "number": 2,
-      "title": "Doenças infecciosas do saneamento",
-      "subtitle": "Quatro pela boca, uma pelo vetor",
-      "color": "#FF9F1C",
+      "title": "Exposição e toxicocinética",
+      "subtitle": "Como entra, acumula e magnifica",
+      "color": "#3DDC97",
       "scenes": [
         {
           "id": "m2s1",
-          "bloom": "Lembrar",
-          "visual": {"type": "opener", "kicker": "Módulo 2", "title": "Doenças infecciosas do saneamento", "subtitle": "Quatro entram pela boca; uma depende de um vetor criado em água parada", "icon": "bacteria"},
+          "bloom": "Compreender",
+          "visual": {
+            "type": "flow",
+            "layout": "row",
+            "heading": "Vias de exposição",
+            "hero": {
+              "title": "Exposição",
+              "body": "o contato que inicia tudo"
+            },
+            "nodes": [
+              {
+                "id": "v1",
+                "label": "Oral",
+                "sub": "alimento e água contaminados",
+                "icon": "drop"
+              },
+              {
+                "id": "v2",
+                "label": "Dérmica",
+                "sub": "lipossolúvel: atravessa a pele",
+                "icon": "worker"
+              },
+              {
+                "id": "v3",
+                "label": "Inalatória",
+                "sub": "pulverização e poeira",
+                "icon": "wind"
+              }
+            ],
+            "chips": [
+              {
+                "id": "ch4",
+                "text": "No trabalhador rural, a pele costuma ser a principal via"
+              }
+            ]
+          },
           "lines": [
-            {"id": "m2-01", "speaker": "professor", "text": "Módulo dois: as doenças infecciosas ligadas ao saneamento.", "cues": [{"word": "doenças", "target": "title"}]},
-            {"id": "m2-02", "speaker": "professor", "text": "Quatro entram pela boca, pela via fecal-oral, e uma depende de um vetor que se cria em água parada.", "cues": [{"word": "Quatro", "target": "subtitle"}]}
+            {
+              "id": "m2-01",
+              "speaker": "professor",
+              "text": "A primeira fase da intoxicação é a exposição, o contato com o tóxico.",
+              "cues": [
+                {
+                  "word": "exposição",
+                  "target": "hero"
+                }
+              ]
+            },
+            {
+              "id": "m2-02",
+              "speaker": "professor",
+              "text": "São três vias. A oral, por alimento e água.",
+              "cues": [
+                {
+                  "word": "oral",
+                  "target": "v1"
+                }
+              ]
+            },
+            {
+              "id": "m2-03",
+              "speaker": "professor",
+              "text": "A dérmica, que importa muito porque o clorado é lipossolúvel e atravessa a pele.",
+              "cues": [
+                {
+                  "word": "dérmica",
+                  "target": "v2"
+                }
+              ]
+            },
+            {
+              "id": "m2-04",
+              "speaker": "professor",
+              "text": "E a inalatória, na pulverização e na poeira.",
+              "cues": [
+                {
+                  "word": "inalatória",
+                  "target": "v3"
+                }
+              ]
+            },
+            {
+              "id": "m2-05",
+              "speaker": "aluno",
+              "text": "Qual pesa mais no trabalhador rural?",
+              "cues": []
+            },
+            {
+              "id": "m2-06",
+              "speaker": "professor",
+              "text": "Em geral a pele, justamente pela lipossolubilidade.",
+              "cues": [
+                {
+                  "word": "pele",
+                  "target": "ch4"
+                }
+              ]
+            }
           ]
         },
         {
           "id": "m2s2",
-          "bloom": "Lembrar",
+          "bloom": "Analisar",
           "visual": {
-            "type": "cards", "heading": "As cinco doenças do objetivo", "columns": 5,
-            "items": [
-              {"id": "dengue", "title": "Dengue", "body": "DENV 1 a 4 (Flavivirus) · vetor Aedes aegypti", "icon": "mosquito", "tag": "vetor"},
-              {"id": "ascaris", "title": "Ascaridíase", "body": "Ascaris lumbricoides (nematoide) · ovo no solo", "icon": "worm", "tag": "fecal-oral"},
-              {"id": "colera", "title": "Cólera", "body": "Vibrio cholerae O1 e O139 · água e alimento", "icon": "bacteria", "tag": "fecal-oral"},
-              {"id": "giardia", "title": "Giardíase", "body": "Giardia lamblia (flagelado) · cisto", "icon": "cyst", "tag": "fecal-oral"},
-              {"id": "crypto", "title": "Criptosporidiose", "body": "Cryptosporidium spp. (apicomplexa) · oocisto", "icon": "oocyst", "tag": "fecal-oral"}
-            ]
+            "type": "adipose",
+            "heading": "Por que o clorado acumula na gordura"
           },
           "lines": [
-            {"id": "m2-03", "speaker": "professor", "text": "A dengue é a doença do vetor. As outras quatro são ascaridíase, cólera, giardíase e criptosporidiose.", "cues": [{"word": "dengue", "target": "dengue"}, {"word": "ascaridíase", "target": "ascaris"}, {"word": "cólera", "target": "colera"}, {"word": "giardíase", "target": "giardia"}, {"word": "criptosporidiose", "target": "crypto"}]}
+            {
+              "id": "m2-07",
+              "speaker": "professor",
+              "text": "Agora a toxicocinética, que é o que o corpo faz com o tóxico.",
+              "cues": [
+                {
+                  "word": "toxicocinética",
+                  "target": "__heading"
+                }
+              ]
+            },
+            {
+              "id": "m2-08",
+              "speaker": "professor",
+              "text": "Como é muito lipofílico, ele se distribui e fica guardado no tecido adiposo.",
+              "cues": [
+                {
+                  "word": "lipofílico",
+                  "target": "fat"
+                },
+                {
+                  "word": "adiposo",
+                  "target": "fat"
+                }
+              ]
+            },
+            {
+              "id": "m2-09",
+              "speaker": "professor",
+              "text": "A biotransformação hepática é lenta, então a meia-vida é longa, de meses a anos.",
+              "cues": [
+                {
+                  "word": "biotransformação",
+                  "target": "liver"
+                },
+                {
+                  "word": "meia-vida",
+                  "target": "curve"
+                }
+              ]
+            },
+            {
+              "id": "m2-09b",
+              "speaker": "professor",
+              "text": "No dê-dê-tê isso é extremo: ele vira dê-dê-é, um metabólito ainda mais estável, que dura anos.",
+              "cues": [
+                {
+                  "word": "metabólito",
+                  "target": "curve"
+                }
+              ]
+            },
+            {
+              "id": "m2-10",
+              "speaker": "aluno",
+              "text": "E se a pessoa emagrece rápido? A gordura solta tudo de uma vez?",
+              "cues": []
+            },
+            {
+              "id": "m2-11",
+              "speaker": "professor",
+              "text": "Ótima pergunta. Na perda rápida de peso, o estoque é mobilizado e a concentração no sangue sobe.",
+              "cues": [
+                {
+                  "word": "mobilizado",
+                  "target": "release"
+                }
+              ]
+            },
+            {
+              "id": "m2-12",
+              "speaker": "professor",
+              "text": "A saída é lenta, pela bile e pela urina, e também pelo leite materno e pela placenta.",
+              "cues": [
+                {
+                  "word": "leite",
+                  "target": "milk"
+                },
+                {
+                  "word": "placenta",
+                  "target": "placenta"
+                }
+              ]
+            }
           ]
         },
         {
           "id": "m2s3",
-          "bloom": "Compreender",
+          "bloom": "Analisar",
           "visual": {
-            "type": "cards", "heading": "Ovo, cisto e oocisto: não é tudo igual", "columns": 3,
-            "items": [
-              {"id": "ovo", "title": "Ovo", "body": "Helminto (Ascaris). Precisa amadurecer no solo por semanas até ficar embrionado e infectante.", "icon": "egg"},
-              {"id": "cisto", "title": "Cisto", "body": "Protozoário (Giardia). Forma de resistência eliminada nas fezes; infecta com poucos cistos.", "icon": "cyst"},
-              {"id": "oocisto", "title": "Oocisto", "body": "Apicomplexa (Cryptosporidium). Já sai infectante nas fezes e resiste muito ao cloro.", "icon": "oocyst"}
-            ]
+            "type": "biomag",
+            "heading": "Bioacumulação e biomagnificação"
           },
           "lines": [
-            {"id": "m2-04", "speaker": "aluno", "text": "Eu sempre confundo ovo, cisto e oocisto. Não é tudo a mesma coisa?", "cues": []},
-            {"id": "m2-05", "speaker": "professor", "text": "Não, e isso cai muito. Ovo é de helminto, como o Ascaris, e precisa amadurecer no solo por semanas antes de infectar.", "cues": [{"word": "helminto", "target": "ovo"}]},
-            {"id": "m2-06", "speaker": "professor", "text": "Cisto é a forma de resistência de protozoário, como a Giardia. E oocisto é do Cryptosporidium, que já sai infectante nas fezes.", "cues": [{"word": "Cisto", "target": "cisto"}, {"word": "oocisto", "target": "oocisto"}]}
+            {
+              "id": "m2-13",
+              "speaker": "professor",
+              "text": "Essa persistência explica dois fenômenos que a prova adora separar.",
+              "cues": [
+                {
+                  "word": "dois",
+                  "target": "__heading"
+                }
+              ]
+            },
+            {
+              "id": "m2-14",
+              "speaker": "professor",
+              "text": "Bioacumulação é o tóxico subindo no mesmo organismo ao longo do tempo.",
+              "cues": [
+                {
+                  "word": "Bioacumulação",
+                  "target": "accum"
+                }
+              ]
+            },
+            {
+              "id": "m2-15",
+              "speaker": "professor",
+              "text": "Biomagnificação é a concentração aumentando a cada degrau da cadeia alimentar.",
+              "cues": [
+                {
+                  "word": "Biomagnificação",
+                  "target": "chain"
+                }
+              ]
+            },
+            {
+              "id": "m2-16",
+              "speaker": "professor",
+              "text": "O zooplâncton tem pouco. O peixe come muitos, a ave come muitos peixes.",
+              "cues": [
+                {
+                  "word": "zooplâncton",
+                  "target": "level1"
+                },
+                {
+                  "word": "peixe",
+                  "target": "level2"
+                },
+                {
+                  "word": "ave",
+                  "target": "level3"
+                }
+              ]
+            },
+            {
+              "id": "m2-17",
+              "speaker": "aluno",
+              "text": "E no topo está o ser humano, com a maior concentração.",
+              "cues": [
+                {
+                  "word": "humano",
+                  "target": "level4"
+                }
+              ]
+            },
+            {
+              "id": "m2-18",
+              "speaker": "professor",
+              "text": "Exato. Por isso peixe e leite são sentinelas da contaminação.",
+              "cues": [
+                {
+                  "word": "sentinelas",
+                  "target": "warn"
+                }
+              ]
+            }
           ]
         },
         {
           "id": "m2s4",
-          "bloom": "Compreender",
-          "visual": {"type": "ascaris", "heading": "Ciclo de Loss do Ascaris lumbricoides"},
+          "bloom": "Aplicar",
+          "visual": {
+            "type": "quiz",
+            "level": "Aplicar",
+            "question": "Uma nutriz perde muito peso. Por que a concentração de organoclorado no leite pode subir?",
+            "options": [
+              {
+                "id": "a",
+                "text": "O fígado passa a produzir o tóxico"
+              },
+              {
+                "id": "b",
+                "text": "A gordura mobilizada libera o estoque acumulado"
+              },
+              {
+                "id": "c",
+                "text": "O rim reabsorve o clorado da urina"
+              },
+              {
+                "id": "d",
+                "text": "O leite sintetiza o DDT de novo"
+              }
+            ],
+            "correct": "b",
+            "explanation": "O clorado fica estocado na gordura; ao mobilizá-la, ele cai no sangue e passa ao leite."
+          },
           "lines": [
-            {"id": "m2-07", "speaker": "professor", "text": "Vamos ao ciclo do Ascaris, chamado ciclo de Loss. Tudo começa com a ingestão do ovo embrionado.", "cues": [{"word": "ingestão", "target": "egg"}]},
-            {"id": "m2-08", "speaker": "professor", "text": "No intestino delgado, a larva sai do ovo e atravessa a parede intestinal.", "cues": [{"word": "atravessa", "target": "intestine"}]},
-            {"id": "m2-09", "speaker": "professor", "text": "Pela veia porta, chega ao fígado, depois ao coração direito e aos pulmões.", "cues": [{"word": "fígado", "target": "liver"}, {"word": "coração", "target": "heart"}, {"word": "pulmões", "target": "lung"}]},
-            {"id": "m2-10", "speaker": "aluno", "text": "Pulmão? Mas não é um verme do intestino?", "cues": []},
-            {"id": "m2-11", "speaker": "professor", "text": "É, mas ele faz esse passeio. Dos alvéolos, a larva sobe pela traqueia, é deglutida e volta ao intestino, onde vira adulta no jejuno.", "cues": [{"word": "traqueia", "target": "trachea"}, {"word": "adulta", "target": "adult"}]},
-            {"id": "m2-12", "speaker": "professor", "text": "Por isso o exame de fezes só fica positivo dois a três meses depois da infecção.", "cues": [{"word": "exame", "target": "exam"}]}
+            {
+              "id": "m2-19",
+              "speaker": "professor",
+              "text": "Desafio de aplicação. Uma lactante emagrece rápido. Por que o leite fica mais contaminado?",
+              "cues": [
+                {
+                  "word": "Desafio",
+                  "target": "__tag"
+                },
+                {
+                  "word": "lactante",
+                  "target": "question"
+                }
+              ]
+            },
+            {
+              "id": "m2-20",
+              "speaker": "professor",
+              "text": "Pense na gordura como um depósito. Escolha a melhor explicação.",
+              "cues": [
+                {
+                  "word": "depósito",
+                  "target": "options"
+                }
+              ]
+            },
+            {
+              "id": "m2-pause",
+              "speaker": "pausa",
+              "pauseMs": 7000,
+              "cues": []
+            },
+            {
+              "id": "m2-21",
+              "speaker": "aluno",
+              "text": "Acho que é o rim reabsorvendo da urina.",
+              "cues": [
+                {
+                  "word": "rim",
+                  "target": "c"
+                }
+              ]
+            },
+            {
+              "id": "m2-22",
+              "speaker": "professor",
+              "text": "Entendo a lógica, mas o rim não concentra assim. O segredo está na gordura.",
+              "cues": []
+            },
+            {
+              "id": "m2-23",
+              "speaker": "professor",
+              "text": "A gordura mobilizada devolve o estoque ao sangue, e ele passa ao leite.",
+              "cues": [
+                {
+                  "word": "mobilizada",
+                  "target": "answer"
+                },
+                {
+                  "word": "estoque",
+                  "target": "explanation"
+                }
+              ]
+            }
           ]
         },
         {
           "id": "m2s5",
           "bloom": "Compreender",
           "visual": {
-            "type": "compare", "heading": "Ascaridíase: as duas fases clínicas",
-            "left": {"id": "left", "title": "Fase pulmonar", "sub": "larva migrando", "color": "#7C9CFF", "items": [
-              {"id": "l1", "text": "Síndrome de Löffler: tosse, chiado, infiltrado migratório"},
-              {"id": "l2", "text": "Eosinofilia intensa (larva no tecido)"}
-            ]},
-            "right": {"id": "right", "title": "Fase intestinal", "sub": "verme adulto", "color": "#FF9F1C", "items": [
-              {"id": "r1", "text": "Dor abdominal, desnutrição"},
-              {"id": "r2", "text": "Obstrução por bolo de vermes; verme sai nas fezes ou pela boca"}
-            ]},
-            "footer": {"id": "tx", "text": "Albendazol 400 mg, dose única + saneamento e higiene das mãos e dos alimentos"}
+            "type": "flashcards",
+            "heading": "Flashcards relâmpago",
+            "cards": [
+              {
+                "id": "g1",
+                "q": "Onde o organoclorado se acumula?",
+                "a": "Tecido adiposo (é lipofílico)"
+              },
+              {
+                "id": "g2",
+                "q": "Bioacumulação x biomagnificação?",
+                "a": "Mesmo corpo x subir na cadeia"
+              },
+              {
+                "id": "g3",
+                "q": "Duas vias de excreção que preocupam?",
+                "a": "Leite materno e placenta"
+              }
+            ]
           },
           "lines": [
-            {"id": "m2-13", "speaker": "professor", "text": "Na passagem pelo pulmão, pode surgir a síndrome de Löffler: tosse, chiado e eosinofilia.", "cues": [{"word": "pulmão", "target": "left"}, {"word": "Löffler", "target": "l1"}, {"word": "eosinofilia", "target": "l2"}]},
-            {"id": "m2-14", "speaker": "professor", "text": "No intestino, há dor abdominal e desnutrição. Em crianças com muitos vermes, pode haver obstrução intestinal.", "cues": [{"word": "intestino", "target": "right"}, {"word": "dor", "target": "r1"}, {"word": "obstrução", "target": "r2"}]},
-            {"id": "m2-15", "speaker": "professor", "text": "O tratamento é albendazol, quatrocentos miligramas em dose única, junto com saneamento e lavagem das mãos e dos alimentos.", "cues": [{"word": "albendazol", "target": "tx"}]}
+            {
+              "id": "m2-24",
+              "speaker": "professor",
+              "text": "Onde o clorado se acumula?",
+              "cues": [
+                {
+                  "word": "acumula",
+                  "target": "g1"
+                }
+              ]
+            },
+            {
+              "id": "m2-25",
+              "speaker": "professor",
+              "text": "No tecido adiposo, porque é lipofílico.",
+              "cues": [
+                {
+                  "word": "adiposo",
+                  "target": "g1",
+                  "action": "solve"
+                }
+              ]
+            },
+            {
+              "id": "m2-26",
+              "speaker": "professor",
+              "text": "Diferença entre bioacumulação e biomagnificação?",
+              "cues": [
+                {
+                  "word": "Diferença",
+                  "target": "g2"
+                }
+              ]
+            },
+            {
+              "id": "m2-27",
+              "speaker": "professor",
+              "text": "Mesmo corpo contra subir na cadeia alimentar.",
+              "cues": [
+                {
+                  "word": "corpo",
+                  "target": "g2",
+                  "action": "solve"
+                }
+              ]
+            },
+            {
+              "id": "m2-28",
+              "speaker": "professor",
+              "text": "Duas vias de excreção que preocupam?",
+              "cues": [
+                {
+                  "word": "excreção",
+                  "target": "g3"
+                }
+              ]
+            },
+            {
+              "id": "m2-29",
+              "speaker": "professor",
+              "text": "Leite materno e placenta.",
+              "cues": [
+                {
+                  "word": "Leite",
+                  "target": "g3",
+                  "action": "solve"
+                }
+              ]
+            }
           ]
         },
         {
           "id": "m2s6",
-          "bloom": "Compreender",
-          "visual": {"type": "cholera", "heading": "Cólera: como a toxina causa diarreia secretora"},
-          "lines": [
-            {"id": "m2-16", "speaker": "professor", "text": "Agora a cólera, causada pelo Vibrio cholerae dos sorogrupos O1 e O139. O segredo dela é a toxina.", "cues": [{"word": "toxina", "target": "toxin"}]},
-            {"id": "m2-17", "speaker": "professor", "text": "A subunidade B se liga ao gangliosídeo GM1 da célula intestinal. A subunidade A entra e ativa a proteína Gs.", "cues": [{"word": "liga", "target": "gm1"}, {"word": "ativa", "target": "gs"}]},
-            {"id": "m2-18", "speaker": "professor", "text": "Com isso, o AMP cíclico sobe muito, e o canal CFTR fica aberto. Sai cloro, e a água vai junto.", "cues": [{"word": "cíclico", "target": "camp"}, {"word": "canal", "target": "cftr"}, {"word": "água", "target": "water"}]},
-            {"id": "m2-19", "speaker": "aluno", "text": "Então é uma diarreia com muita inflamação, com sangue?", "cues": []},
-            {"id": "m2-20", "speaker": "professor", "text": "Não. É diarreia secretora, sem inflamação, sem febre e sem sangue. Aquosa, tipo água de arroz, com desidratação muito rápida.", "cues": [{"word": "secretora", "target": "secretory"}]},
-            {"id": "m2-21", "speaker": "professor", "text": "E o soro oral funciona porque o cotransporte de sódio e glicose, o SGLT1, continua intacto.", "cues": [{"word": "cotransporte", "target": "sglt"}]}
-          ]
-        },
-        {
-          "id": "m2s7",
-          "bloom": "Aplicar",
+          "bloom": "Analisar",
           "visual": {
-            "type": "cards", "heading": "Cólera: conduta", "columns": 4,
-            "items": [
-              {"id": "c1", "title": "Reidratação", "body": "É a base do tratamento: oral ou venosa, conforme o grau", "icon": "drop"},
-              {"id": "c2", "title": "Antibiótico", "body": "Adjuvante: doxiciclina ou azitromicina (crianças e gestantes)", "icon": "flask"},
-              {"id": "c3", "title": "Notificação", "body": "Compulsória e imediata", "icon": "alert"},
-              {"id": "c4", "title": "Prevenção", "body": "Água tratada, esgoto e higiene dos alimentos", "icon": "shield"}
+            "type": "quote",
+            "text": "Lipofílico, persistente e que sobe na cadeia: por isso o clorado não vai embora.",
+            "highlights": [
+              "Lipofílico",
+              "persistente"
             ]
           },
           "lines": [
-            {"id": "m2-22", "speaker": "aluno", "text": "E o antibiótico é a parte principal do tratamento?", "cues": []},
-            {"id": "m2-23", "speaker": "professor", "text": "Não, a base é a reidratação. O antibiótico, como doxiciclina ou azitromicina, só encurta a diarreia e a eliminação do vibrião.", "cues": [{"word": "reidratação", "target": "c1"}, {"word": "antibiótico", "target": "c2"}]},
-            {"id": "m2-24", "speaker": "professor", "text": "A cólera é de notificação compulsória imediata. E a prevenção, de novo, é água tratada e esgoto.", "cues": [{"word": "notificação", "target": "c3"}, {"word": "prevenção", "target": "c4"}]}
-          ]
-        },
-        {
-          "id": "m2s8",
-          "bloom": "Analisar",
-          "visual": {
-            "type": "compare", "heading": "Giardia × Cryptosporidium",
-            "center": {"id": "both", "text": "Ambos resistem ao cloro: ferver ou filtrar a água"},
-            "left": {"id": "left", "title": "Giardia lamblia", "sub": "protozoário flagelado · cisto", "color": "#FFB703", "items": [
-              {"id": "l1", "text": "Na luz, aderida à mucosa pelo disco ventral"},
-              {"id": "l2", "text": "Esteatorreia, distensão, má absorção, déficit de crescimento"},
-              {"id": "l3", "text": "Exame parasitológico de fezes comum (repetir amostras)"},
-              {"id": "l4", "text": "Metronidazol, tinidazol ou secnidazol"}
-            ]},
-            "right": {"id": "right", "title": "Cryptosporidium", "sub": "apicomplexa · oocisto", "color": "#EF476F", "items": [
-              {"id": "r1", "text": "Intracelular, extracitoplasmático: vacúolo na borda em escova"},
-              {"id": "r2", "text": "Ziehl-Neelsen modificado (álcool-ácido resistente)"},
-              {"id": "r3", "text": "Diarreia aquosa; crônica e grave no HIV com CD4 baixo"},
-              {"id": "r4", "text": "Suporte + nitazoxanida; no HIV, terapia antirretroviral"}
-            ]}
-          },
-          "lines": [
-            {"id": "m2-25", "speaker": "professor", "text": "Agora, dois protozoários que se parecem: Giardia e Cryptosporidium. Ambos resistem ao cloro.", "cues": [{"word": "Giardia", "target": "left"}, {"word": "Cryptosporidium", "target": "right"}, {"word": "cloro", "target": "both"}]},
-            {"id": "m2-26", "speaker": "aluno", "text": "Então clorar a água da caixa resolve?", "cues": []},
-            {"id": "m2-27", "speaker": "professor", "text": "Não resolve totalmente. Para esses dois, é preciso ferver ou filtrar a água.", "cues": [{"word": "ferver", "target": "both", "action": "highlight"}]},
-            {"id": "m2-28", "speaker": "professor", "text": "A Giardia fica na luz do intestino, aderida à mucosa. Causa esteatorreia, distensão e má absorção, e aparece no exame de fezes comum.", "cues": [{"word": "luz", "target": "l1"}, {"word": "esteatorreia", "target": "l2"}, {"word": "exame", "target": "l3"}]},
-            {"id": "m2-29", "speaker": "professor", "text": "O Cryptosporidium fica dentro da borda da célula, num vacúolo. Exige coloração de Ziehl-Neelsen modificada.", "cues": [{"word": "borda", "target": "r1"}, {"word": "Ziehl-Neelsen", "target": "r2"}]},
-            {"id": "m2-30", "speaker": "professor", "text": "Ele é grave e crônico em pessoas com HIV e CD4 baixo. O tratamento é suporte e nitazoxanida e, no HIV, a terapia antirretroviral.", "cues": [{"word": "crônico", "target": "r3"}, {"word": "nitazoxanida", "target": "r4"}]},
-            {"id": "m2-31", "speaker": "professor", "text": "Já a Giardia se trata com metronidazol, tinidazol ou secnidazol.", "cues": [{"word": "metronidazol", "target": "l4"}]}
-          ]
-        },
-        {
-          "id": "m2s9",
-          "bloom": "Compreender",
-          "visual": {
-            "type": "flow", "layout": "row", "heading": "Dengue: a febre que cai é o alerta",
-            "nodes": [
-              {"id": "febril", "label": "Fase febril", "sub": "febre alta, dor retro-orbitária, mialgia", "icon": "fire"},
-              {"id": "def", "label": "Defervescência", "sub": "queda da febre: início da fase crítica", "icon": "arrowdown"},
-              {"id": "extr", "label": "Extravasamento de plasma", "sub": "hemoconcentração, derrames", "icon": "drop"},
-              {"id": "alarme", "label": "Sinais de alarme", "sub": "reconhecer cedo", "icon": "alert"},
-              {"id": "choque", "label": "Choque", "sub": "evitável com hidratação", "icon": "heart"}
-            ]
-          },
-          "lines": [
-            {"id": "m2-32", "speaker": "professor", "text": "Por fim, a dengue: um flavivírus com quatro sorotipos, transmitido pela fêmea do Aedes aegypti.", "cues": []},
-            {"id": "m2-33", "speaker": "professor", "text": "Começa com febre alta, dor atrás dos olhos e dor no corpo.", "cues": [{"word": "febre", "target": "febril"}]},
-            {"id": "m2-34", "speaker": "aluno", "text": "E quando a febre baixa, a pessoa já está melhorando, certo?", "cues": []},
-            {"id": "m2-35", "speaker": "professor", "text": "Cuidado, esse é o ponto mais perigoso. A queda da febre marca o início da fase crítica, não o fim da doença.", "cues": [{"word": "queda", "target": "def"}]},
-            {"id": "m2-36", "speaker": "professor", "text": "Nessa fase pode haver extravasamento de plasma. Ele se manifesta como sinais de alarme e pode evoluir para choque.", "cues": [{"word": "extravasamento", "target": "extr"}, {"word": "alarme", "target": "alarme"}, {"word": "choque", "target": "choque"}]}
-          ]
-        },
-        {
-          "id": "m2s10",
-          "bloom": "Aplicar",
-          "visual": {
-            "type": "cards", "heading": "Dengue: sinais de alarme", "columns": 3,
-            "items": [
-              {"id": "a1", "title": "Dor abdominal intensa", "body": "e contínua", "icon": "alert"},
-              {"id": "a2", "title": "Vômitos persistentes", "body": "impedem a hidratação oral", "icon": "alert"},
-              {"id": "a3", "title": "Acúmulo de líquidos", "body": "ascite, derrame pleural ou pericárdico", "icon": "drop"},
-              {"id": "a4", "title": "Sangramento de mucosa", "body": "gengiva, nariz, vômito com sangue", "icon": "drop"},
-              {"id": "a5", "title": "Letargia ou irritabilidade", "body": "sinal neurológico de gravidade", "icon": "brain"},
-              {"id": "a6", "title": "Hematócrito em alta", "body": "aumento progressivo", "icon": "flask"}
-            ],
-            "chips": [{"id": "aas", "text": "Hidratar conforme grupo A, B, C ou D · Sem AAS e sem anti-inflamatórios"}]
-          },
-          "lines": [
-            {"id": "m2-37", "speaker": "professor", "text": "Os sinais de alarme são: dor abdominal intensa, vômitos persistentes, acúmulo de líquidos e sangramento de mucosa.", "cues": [{"word": "dor", "target": "a1"}, {"word": "vômitos", "target": "a2"}, {"word": "acúmulo", "target": "a3"}, {"word": "sangramento", "target": "a4"}]},
-            {"id": "m2-38", "speaker": "professor", "text": "Também letargia ou irritabilidade, e aumento progressivo do hematócrito.", "cues": [{"word": "letargia", "target": "a5"}, {"word": "hematócrito", "target": "a6"}]},
-            {"id": "m2-39", "speaker": "professor", "text": "O tratamento é hidratação conforme o grupo A, B, C ou D. E nunca use AAS nem anti-inflamatórios, pelo risco de sangramento.", "cues": [{"word": "nunca", "target": "aas"}]}
-          ]
-        },
-        {
-          "id": "m2s11",
-          "bloom": "Analisar",
-          "visual": {
-            "type": "quiz", "level": "Analisar",
-            "question": "Morador que bebe água de poço raso tem diarreia aquosa volumosa, sem febre e sem sangue, com desidratação rápida. Qual o mecanismo mais provável?",
-            "options": [
-              {"id": "a", "text": "Invasão da mucosa com inflamação"},
-              {"id": "b", "text": "Toxina que eleva o AMPc e abre o canal CFTR"},
-              {"id": "c", "text": "Adesão do trofozoíto na luz, com má absorção de gordura"},
-              {"id": "d", "text": "Parasita em vacúolo na borda em escova"}
-            ],
-            "correct": "b",
-            "explanation": "Diarreia secretora, aquosa, sem febre e sem sangue = cólera: toxina → Gs → AMPc alto → CFTR aberto → saída de Cl⁻ e água."
-          },
-          "lines": [
-            {"id": "m2-40", "speaker": "professor", "text": "Desafio de análise. Diarreia aquosa volumosa, sem febre e sem sangue, com desidratação rápida, em quem bebe água de poço. Qual é o mecanismo?", "cues": [{"word": "Desafio", "target": "question"}, {"word": "mecanismo", "target": "options"}]},
-            {"id": "m2-q1", "speaker": "pausa", "text": "", "pauseMs": 7000, "cues": []},
-            {"id": "m2-41", "speaker": "aluno", "text": "Eu pensei na Giardia, porque também vem da água.", "cues": [{"word": "Giardia", "target": "c", "action": "pick"}]},
-            {"id": "m2-42", "speaker": "professor", "text": "Boa associação com a água, mas a Giardia dá esteatorreia. Esse quadro é de cólera: toxina, AMP cíclico alto e canal CFTR aberto.", "cues": [{"word": "cólera", "target": "answer"}, {"word": "toxina", "target": "explanation"}]}
-          ]
-        },
-        {
-          "id": "m2s12",
-          "bloom": "Compreender",
-          "visual": {"type": "quote", "text": "Na dengue, a febre que cai é o alerta, não o alívio.", "highlights": ["alerta", "alívio"]},
-          "lines": [
-            {"id": "m2-43", "speaker": "professor", "text": "E leve esta para a prova: na dengue, a febre que cai é o alerta, não o alívio.", "cues": [{"word": "leve", "target": "quote"}]}
+            {
+              "id": "m2-30",
+              "speaker": "professor",
+              "text": "Frase-chave: lipofílico, persistente e que sobe na cadeia alimentar.",
+              "cues": [
+                {
+                  "word": "Lipofílico",
+                  "target": "quote"
+                }
+              ]
+            }
           ]
         }
       ]
@@ -482,155 +1414,654 @@
     {
       "id": "m3",
       "number": 3,
-      "title": "Imunologia contra parasitas",
-      "subtitle": "O tamanho e o local do parasita definem a resposta",
-      "color": "#B388FF",
+      "title": "Mecanismo e intoxicação",
+      "subtitle": "O alvo no sistema nervoso",
+      "color": "#FF5C7A",
       "scenes": [
         {
           "id": "m3s1",
-          "bloom": "Compreender",
-          "visual": {"type": "opener", "kicker": "Módulo 3", "title": "Imunologia contra parasitas", "subtitle": "O tamanho e a localização do parasita definem a resposta", "icon": "shield"},
+          "bloom": "Analisar",
+          "visual": {
+            "type": "neuro",
+            "heading": "Toxicodinâmica: dois alvos no neurônio"
+          },
           "lines": [
-            {"id": "m3-01", "speaker": "professor", "text": "Módulo três: como o corpo se defende dos parasitas.", "cues": [{"word": "defende", "target": "title"}]},
-            {"id": "m3-02", "speaker": "professor", "text": "A regra de ouro é: o tamanho e a localização do parasita definem a resposta.", "cues": [{"word": "tamanho", "target": "subtitle"}]}
+            {
+              "id": "m3-01",
+              "speaker": "professor",
+              "text": "Chegamos ao coração da aula: a toxicodinâmica, o que o tóxico faz no corpo.",
+              "cues": [
+                {
+                  "word": "toxicodinâmica",
+                  "target": "__heading"
+                }
+              ]
+            },
+            {
+              "id": "m3-02",
+              "speaker": "professor",
+              "text": "O dê-dê-tê age no canal de sódio, mantendo-o aberto por tempo demais.",
+              "cues": [
+                {
+                  "word": "sódio",
+                  "target": "sodium"
+                }
+              ]
+            },
+            {
+              "id": "m3-03",
+              "speaker": "professor",
+              "text": "A repolarização atrasa, o neurônio dispara repetido, e aparece o tremor.",
+              "cues": [
+                {
+                  "word": "repolarização",
+                  "target": "fire"
+                },
+                {
+                  "word": "tremor",
+                  "target": "tremor"
+                }
+              ]
+            },
+            {
+              "id": "m3-04",
+              "speaker": "aluno",
+              "text": "E os ciclodienos e o lindano? Agem no mesmo lugar?",
+              "cues": []
+            },
+            {
+              "id": "m3-05",
+              "speaker": "professor",
+              "text": "Não. Eles bloqueiam o receptor gaba a, fechando a entrada de cloreto.",
+              "cues": [
+                {
+                  "word": "gaba",
+                  "target": "gaba"
+                },
+                {
+                  "word": "cloreto",
+                  "target": "chloride"
+                }
+              ]
+            },
+            {
+              "id": "m3-06",
+              "speaker": "professor",
+              "text": "Sem essa inibição, o neurônio fica excitável demais e vem a convulsão.",
+              "cues": [
+                {
+                  "word": "inibição",
+                  "target": "chloride"
+                },
+                {
+                  "word": "convulsão",
+                  "target": "seizure"
+                }
+              ]
+            }
           ]
         },
         {
           "id": "m3s2",
           "bloom": "Compreender",
           "visual": {
-            "type": "cards", "heading": "Onde está o parasita → qual resposta", "columns": 3,
-            "items": [
-              {"id": "i1", "title": "Intracelular → Th1", "body": "Cryptosporidium: IFN-γ ativa macrófagos e linfócitos T CD8", "icon": "cell"},
-              {"id": "i2", "title": "Helminto grande → Th2", "body": "Ascaris: IgE, eosinófilos, mastócitos e muco", "icon": "worm"},
-              {"id": "i3", "title": "Luz intestinal → IgA", "body": "Giardia: IgA secretória impede a adesão à mucosa", "icon": "shield"}
-            ]
+            "type": "compare",
+            "heading": "Dois mecanismos, dois quadros",
+            "left": {
+              "id": "L",
+              "title": "Tipo DDT",
+              "sub": "difeniletanos",
+              "color": "#FF5C7A",
+              "items": [
+                {
+                  "id": "l1",
+                  "text": "Canal de sódio aberto"
+                },
+                {
+                  "id": "l2",
+                  "text": "Repolarização atrasada"
+                },
+                {
+                  "id": "l3",
+                  "text": "Sinal clássico: tremor"
+                }
+              ]
+            },
+            "right": {
+              "id": "R",
+              "title": "Tipo ciclodieno / HCH",
+              "sub": "aldrin, lindano, endossulfam",
+              "color": "#FFB703",
+              "items": [
+                {
+                  "id": "r1",
+                  "text": "Bloqueia GABA-A"
+                },
+                {
+                  "id": "r2",
+                  "text": "Menos cloreto, menos inibição"
+                },
+                {
+                  "id": "r3",
+                  "text": "Sinal clássico: convulsão"
+                }
+              ]
+            },
+            "center": {
+              "id": "band",
+              "text": "Ambos: hiperexcitação do sistema nervoso central"
+            }
           },
           "lines": [
-            {"id": "m3-03", "speaker": "professor", "text": "Parasita dentro da célula, como o Cryptosporidium, pede uma resposta Th1.", "cues": [{"word": "dentro", "target": "i1"}]},
-            {"id": "m3-04", "speaker": "professor", "text": "Helminto grande e fora da célula, como o Ascaris, pede uma resposta Th2.", "cues": [{"word": "Helminto", "target": "i2"}]},
-            {"id": "m3-05", "speaker": "professor", "text": "E protozoário na luz intestinal, como a Giardia, é controlado sobretudo pela imunoglobulina A secretória.", "cues": [{"word": "luz", "target": "i3"}]}
+            {
+              "id": "m3-07",
+              "speaker": "professor",
+              "text": "Vamos separar os dois mecanismos lado a lado.",
+              "cues": [
+                {
+                  "word": "dois",
+                  "target": "__heading"
+                }
+              ]
+            },
+            {
+              "id": "m3-08",
+              "speaker": "professor",
+              "text": "O tipo dê-dê-tê abre o canal de sódio e dá tremor.",
+              "cues": [
+                {
+                  "word": "sódio",
+                  "target": "L"
+                },
+                {
+                  "word": "tremor",
+                  "target": "l3"
+                }
+              ]
+            },
+            {
+              "id": "m3-09",
+              "speaker": "professor",
+              "text": "O tipo ciclodieno bloqueia o gaba a e dá convulsão.",
+              "cues": [
+                {
+                  "word": "ciclodieno",
+                  "target": "R"
+                },
+                {
+                  "word": "convulsão",
+                  "target": "r3"
+                }
+              ]
+            },
+            {
+              "id": "m3-10",
+              "speaker": "aluno",
+              "text": "Mas os dois acabam deixando o sistema nervoso agitado demais, né?",
+              "cues": []
+            },
+            {
+              "id": "m3-11",
+              "speaker": "professor",
+              "text": "Isso: os dois caminhos levam à hiperexcitação do sistema nervoso central.",
+              "cues": [
+                {
+                  "word": "hiperexcitação",
+                  "target": "band"
+                }
+              ]
+            }
           ]
         },
         {
           "id": "m3s3",
           "bloom": "Compreender",
           "visual": {
-            "type": "cards", "heading": "Resposta inata: a primeira linha", "columns": 3,
+            "type": "cards",
+            "heading": "Efeitos crônicos de baixa dose",
+            "badge": "Exposição repetida",
+            "columns": 4,
             "items": [
-              {"id": "b", "title": "Barreiras", "body": "ácido gástrico, muco, peristaltismo, renovação do epitélio, defensinas", "icon": "shield"},
-              {"id": "f", "title": "Fagócitos", "body": "macrófagos e neutrófilos engolem protozoários, mas não um helminto", "icon": "cell"},
-              {"id": "ilc", "title": "Alarminas → ILC2", "body": "epitélio lesado libera IL-25, IL-33 e TSLP; ILC2 produzem IL-5 e IL-13", "icon": "alert"},
-              {"id": "nk", "title": "Células NK", "body": "IFN-γ precoce que ativa macrófagos", "icon": "target"},
-              {"id": "dc", "title": "Células dendríticas", "body": "apresentam o antígeno e direcionam o T CD4 para Th1 ou Th2", "icon": "brain"}
+              {
+                "id": "e1",
+                "title": "Endócrino",
+                "body": "Desregula hormônios.",
+                "icon": "molecule",
+                "swatch": "#FFB703"
+              },
+              {
+                "id": "e2",
+                "title": "Câncer",
+                "body": "Lindano é grupo 1 da IARC.",
+                "icon": "alert",
+                "swatch": "#FF5C7A"
+              },
+              {
+                "id": "e3",
+                "title": "Fígado",
+                "body": "Hepatotoxicidade.",
+                "icon": "liver",
+                "swatch": "#5AC8FA"
+              },
+              {
+                "id": "e4",
+                "title": "Reprodução",
+                "body": "Fertilidade e feto.",
+                "icon": "child",
+                "swatch": "#3DDC97"
+              }
+            ],
+            "chips": [
+              {
+                "id": "ch5",
+                "text": "Agudo: tremor e convulsão. Crônico: endócrino e câncer"
+              }
             ]
           },
           "lines": [
-            {"id": "m3-06", "speaker": "professor", "text": "Antes de tudo vem a resposta inata. As barreiras: ácido gástrico, muco, peristaltismo, renovação do epitélio e defensinas.", "cues": [{"word": "barreiras", "target": "b"}]},
-            {"id": "m3-07", "speaker": "professor", "text": "Macrófagos e neutrófilos fagocitam protozoários. Mas ninguém consegue engolir um verme de vinte centímetros.", "cues": [{"word": "Macrófagos", "target": "f"}]},
-            {"id": "m3-08", "speaker": "aluno", "text": "Então, contra o verme, a resposta inata não faz nada?", "cues": []},
-            {"id": "m3-09", "speaker": "professor", "text": "Faz, sim. O epitélio lesado libera alarminas: interleucina 25, interleucina 33 e TSLP. Elas ativam as células linfoides inatas do tipo 2.", "cues": [{"word": "alarminas", "target": "ilc"}]},
-            {"id": "m3-10", "speaker": "professor", "text": "As células NK liberam interferon gama cedo. E as dendríticas apresentam o antígeno e direcionam o linfócito T CD4.", "cues": [{"word": "NK", "target": "nk"}, {"word": "dendríticas", "target": "dc"}]}
+            {
+              "id": "m3-12",
+              "speaker": "professor",
+              "text": "O quadro agudo é neurológico. Mas o crônico é mais silencioso.",
+              "cues": [
+                {
+                  "word": "crônico",
+                  "target": "__heading"
+                }
+              ]
+            },
+            {
+              "id": "m3-13",
+              "speaker": "professor",
+              "text": "São desreguladores endócrinos e podem ser cancerígenos.",
+              "cues": [
+                {
+                  "word": "endócrinos",
+                  "target": "e1"
+                },
+                {
+                  "word": "cancerígenos",
+                  "target": "e2"
+                }
+              ]
+            },
+            {
+              "id": "m3-14",
+              "speaker": "professor",
+              "text": "O lindano é grupo um da agência internacional, ligado ao linfoma.",
+              "cues": [
+                {
+                  "word": "lindano",
+                  "target": "e2"
+                }
+              ]
+            },
+            {
+              "id": "m3-15",
+              "speaker": "professor",
+              "text": "Há ainda dano ao fígado e efeitos sobre a reprodução.",
+              "cues": [
+                {
+                  "word": "fígado",
+                  "target": "e3"
+                },
+                {
+                  "word": "reprodução",
+                  "target": "e4"
+                }
+              ]
+            },
+            {
+              "id": "m3-15b",
+              "speaker": "aluno",
+              "text": "E o dê-dê-tê, também é cancerígeno?",
+              "cues": []
+            },
+            {
+              "id": "m3-15c",
+              "speaker": "professor",
+              "text": "É provável, grupo dois A da agência internacional; já o lindano é mais forte, grupo um.",
+              "cues": [
+                {
+                  "word": "grupo",
+                  "target": "e2"
+                }
+              ]
+            },
+            {
+              "id": "m3-16",
+              "speaker": "aluno",
+              "text": "Então o perigo não é só a dose alta de uma vez.",
+              "cues": []
+            },
+            {
+              "id": "m3-17",
+              "speaker": "professor",
+              "text": "Exato. Agudo é tremor e convulsão; crônico é endócrino e câncer.",
+              "cues": [
+                {
+                  "word": "Agudo",
+                  "target": "ch5"
+                }
+              ]
+            }
           ]
         },
         {
           "id": "m3s4",
-          "bloom": "Analisar",
+          "bloom": "Compreender",
           "visual": {
-            "type": "table", "heading": "Th1 × Th2", "columns": ["Aspecto", "Th1 · intracelular", "Th2 · helminto"],
-            "rows": [
-              {"id": "ind", "cells": ["Indutor", "IL-12 e IFN-γ", "IL-4 e alarminas"]},
-              {"id": "tf", "cells": ["Fator de transcrição", "T-bet", "GATA-3"]},
-              {"id": "cit", "cells": ["Citocinas", "IFN-γ, TNF, IL-2", "IL-4, IL-5, IL-13"]},
-              {"id": "efe", "cells": ["Efetores", "Macrófago M1 (NO, radicais) e T CD8", "IgE, mastócitos, eosinófilos, muco, contração"]},
-              {"id": "res", "cells": ["Resultado", "Destrói o parasita na célula", "Expulsa o verme (weep and sweep)"]},
-              {"id": "cli", "cells": ["Na clínica", "HIV com CD4 baixo → criptosporidiose crônica", "Eosinofilia, IgE alta, Löffler"]}
+            "type": "flow",
+            "layout": "row",
+            "heading": "Fases da intoxicação e a linha do tempo",
+            "nodes": [
+              {
+                "id": "p1",
+                "label": "Exposição",
+                "sub": "via, dose, tempo",
+                "icon": "drop"
+              },
+              {
+                "id": "p2",
+                "label": "Toxicocinética",
+                "sub": "ADME no corpo",
+                "icon": "clock"
+              },
+              {
+                "id": "p3",
+                "label": "Toxicodinâmica",
+                "sub": "ação no alvo",
+                "icon": "neuron"
+              },
+              {
+                "id": "p4",
+                "label": "Clínica",
+                "sub": "sinais e sintomas",
+                "icon": "heart"
+              }
+            ],
+            "chips": [
+              {
+                "id": "ch6",
+                "text": "Aguda · subaguda · crônica = pela duração e repetição"
+              }
             ]
           },
           "lines": [
-            {"id": "m3-11", "speaker": "professor", "text": "Agora o duelo central: Th1 contra Th2.", "cues": []},
-            {"id": "m3-12", "speaker": "professor", "text": "A Th1 é induzida por interleucina 12 e interferon gama, com o fator de transcrição T-bet.", "cues": [{"word": "induzida", "target": "ind:1"}, {"word": "T-bet", "target": "tf:1"}]},
-            {"id": "m3-13", "speaker": "professor", "text": "A Th2 é induzida por interleucina 4 e pelas alarminas, com o fator GATA-3.", "cues": [{"word": "induzida", "target": "ind:2"}, {"word": "GATA-3", "target": "tf:2"}]},
-            {"id": "m3-14", "speaker": "professor", "text": "As citocinas Th1 são interferon gama, TNF e interleucina 2. Os efetores são o macrófago ativado, que produz óxido nítrico, e o linfócito T CD8.", "cues": [{"word": "citocinas", "target": "cit:1"}, {"word": "efetores", "target": "efe:1"}]},
-            {"id": "m3-15", "speaker": "professor", "text": "As citocinas Th2 são as interleucinas 4, 5 e 13. Os efetores são imunoglobulina E, mastócitos, eosinófilos, muco e contração intestinal.", "cues": [{"word": "citocinas", "target": "cit:2"}, {"word": "efetores", "target": "efe:2"}]},
-            {"id": "m3-16", "speaker": "professor", "text": "O resultado: a Th1 destrói o parasita dentro da célula, e a Th2 expulsa o verme. Em inglês, weep and sweep.", "cues": [{"word": "destrói", "target": "res:1"}, {"word": "expulsa", "target": "res:2"}]},
-            {"id": "m3-17", "speaker": "aluno", "text": "E onde isso aparece na clínica?", "cues": []},
-            {"id": "m3-18", "speaker": "professor", "text": "Com CD4 baixo, falta a Th1, e a criptosporidiose fica crônica. Na Th2 exagerada, aparecem eosinofilia, imunoglobulina E alta e Löffler.", "cues": [{"word": "crônica", "target": "cli:1"}, {"word": "eosinofilia", "target": "cli:2"}]}
+            {
+              "id": "m3-18",
+              "speaker": "professor",
+              "text": "Vamos definir intoxicação: o conjunto de efeitos nocivos do tóxico no organismo.",
+              "cues": [
+                {
+                  "word": "intoxicação",
+                  "target": "__heading"
+                }
+              ]
+            },
+            {
+              "id": "m3-19",
+              "speaker": "professor",
+              "text": "Ela segue quatro fases. Exposição, depois toxicocinética.",
+              "cues": [
+                {
+                  "word": "Exposição",
+                  "target": "p1"
+                },
+                {
+                  "word": "toxicocinética",
+                  "target": "p2"
+                }
+              ]
+            },
+            {
+              "id": "m3-20",
+              "speaker": "professor",
+              "text": "Depois a toxicodinâmica e, por fim, a clínica.",
+              "cues": [
+                {
+                  "word": "toxicodinâmica",
+                  "target": "p3"
+                },
+                {
+                  "word": "clínica",
+                  "target": "p4"
+                }
+              ]
+            },
+            {
+              "id": "m3-21",
+              "speaker": "aluno",
+              "text": "E aguda, subaguda e crônica, onde entram?",
+              "cues": []
+            },
+            {
+              "id": "m3-22",
+              "speaker": "professor",
+              "text": "Isso é outra classificação, pela duração e repetição da exposição.",
+              "cues": [
+                {
+                  "word": "duração",
+                  "target": "ch6"
+                }
+              ]
+            }
           ]
         },
         {
           "id": "m3s5",
-          "bloom": "Compreender",
+          "bloom": "Avaliar",
           "visual": {
-            "type": "cards", "heading": "O que cada peça da resposta Th2 faz", "columns": 3,
-            "items": [
-              {"id": "il4", "title": "IL-4", "body": "induz Th2 e a troca de classe do linfócito B para IgE", "icon": "cell"},
-              {"id": "il5", "title": "IL-5", "body": "produção, sobrevida e ativação de eosinófilos", "icon": "cell"},
-              {"id": "il13", "title": "IL-13", "body": "mais muco, contração do músculo liso, renovação do epitélio", "icon": "drop"},
-              {"id": "mast", "title": "IgE + mastócito", "body": "IgE no FcεRI; antígeno do verme → degranulação (histamina, leucotrienos)", "icon": "target"},
-              {"id": "eos", "title": "Eosinófilo (ADCC)", "body": "liga-se ao verme coberto por anticorpo e libera proteína básica principal", "icon": "target"},
-              {"id": "cross", "title": "Regulação cruzada", "body": "IFN-γ inibe Th2; IL-4 e IL-10 inibem Th1", "icon": "recycle"}
-            ]
+            "type": "quiz",
+            "level": "Avaliar",
+            "question": "Trabalhador com convulsões após usar lindano. Qual mecanismo explica melhor o quadro?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Canal de sódio mantido aberto"
+              },
+              {
+                "id": "b",
+                "text": "Bloqueio do receptor GABA-A"
+              },
+              {
+                "id": "c",
+                "text": "Inibição da acetilcolinesterase"
+              },
+              {
+                "id": "d",
+                "text": "Bloqueio dos canais de cálcio"
+              }
+            ],
+            "correct": "b",
+            "explanation": "Lindano e ciclodienos bloqueiam o GABA-A; a convulsão vem da perda de inibição. A acetilcolinesterase é alvo dos organofosforados."
           },
           "lines": [
-            {"id": "m3-19", "speaker": "professor", "text": "Veja o que cada peça da Th2 faz. A interleucina 4 faz o linfócito B trocar de classe para imunoglobulina E.", "cues": [{"word": "trocar", "target": "il4"}]},
-            {"id": "m3-20", "speaker": "professor", "text": "A interleucina 5 produz e ativa eosinófilos. A interleucina 13 aumenta o muco e a contração da musculatura lisa.", "cues": [{"word": "eosinófilos", "target": "il5"}, {"word": "muco", "target": "il13"}]},
-            {"id": "m3-21", "speaker": "professor", "text": "A imunoglobulina E se liga ao mastócito. O antígeno do verme causa degranulação, com histamina e leucotrienos.", "cues": [{"word": "mastócito", "target": "mast"}]},
-            {"id": "m3-22", "speaker": "professor", "text": "E o eosinófilo se liga ao verme coberto por anticorpo e libera a proteína básica principal. É a citotoxicidade mediada por anticorpo.", "cues": [{"word": "eosinófilo", "target": "eos"}]},
-            {"id": "m3-23", "speaker": "professor", "text": "Há também regulação cruzada: o interferon gama inibe a Th2, e as interleucinas 4 e 10 inibem a Th1.", "cues": [{"word": "regulação", "target": "cross"}]}
+            {
+              "id": "m3-23",
+              "speaker": "professor",
+              "text": "Desafio de avaliar. Convulsão depois de lindano. Qual mecanismo?",
+              "cues": [
+                {
+                  "word": "Desafio",
+                  "target": "__tag"
+                },
+                {
+                  "word": "Convulsão",
+                  "target": "question"
+                }
+              ]
+            },
+            {
+              "id": "m3-24",
+              "speaker": "professor",
+              "text": "Cuidado com a pegadinha do mecanismo de outro grupo de praguicida.",
+              "cues": [
+                {
+                  "word": "Cuidado",
+                  "target": "options"
+                }
+              ]
+            },
+            {
+              "id": "m3-pause",
+              "speaker": "pausa",
+              "pauseMs": 7000,
+              "cues": []
+            },
+            {
+              "id": "m3-25",
+              "speaker": "aluno",
+              "text": "Convulsão me lembra veneno... vou de inibição da acetilcolinesterase.",
+              "cues": [
+                {
+                  "word": "acetilcolinesterase",
+                  "target": "c"
+                }
+              ]
+            },
+            {
+              "id": "m3-26",
+              "speaker": "professor",
+              "text": "Essa é a pegadinha: acetilcolinesterase é organofosforado, não clorado.",
+              "cues": []
+            },
+            {
+              "id": "m3-27",
+              "speaker": "professor",
+              "text": "No lindano, o alvo é o gaba a. A convulsão vem da perda de inibição.",
+              "cues": [
+                {
+                  "word": "gaba",
+                  "target": "answer"
+                },
+                {
+                  "word": "inibição",
+                  "target": "explanation"
+                }
+              ]
+            }
           ]
         },
         {
           "id": "m3s6",
           "bloom": "Analisar",
           "visual": {
-            "type": "cards", "heading": "Como os parasitas escapam", "columns": 3,
-            "items": [
-              {"id": "v1", "title": "Variação antigênica", "body": "Giardia troca as proteínas de superfície (VSP)", "icon": "recycle"},
-              {"id": "v2", "title": "Esconder-se na célula", "body": "Cryptosporidium no vacúolo parasitóforo", "icon": "cell"},
-              {"id": "v3", "title": "Mudança de estágio", "body": "Ascaris: larva e adulto têm antígenos diferentes", "icon": "worm"},
-              {"id": "v4", "title": "Cutícula e complemento", "body": "helmintos resistem ao complemento", "icon": "shield"},
-              {"id": "v5", "title": "Proteases", "body": "Giardia cliva a IgA", "icon": "cross"},
-              {"id": "v6", "title": "Imunomodulação", "body": "T reguladores, IL-10 e TGF-β → cronicidade", "icon": "brain"}
+            "type": "flashcards",
+            "heading": "Flashcards relâmpago",
+            "cards": [
+              {
+                "id": "h1",
+                "q": "Alvo do DDT e sinal clássico?",
+                "a": "Canal de sódio → tremor"
+              },
+              {
+                "id": "h2",
+                "q": "Alvo do lindano e sinal clássico?",
+                "a": "GABA-A → convulsão"
+              },
+              {
+                "id": "h3",
+                "q": "As 4 fases da intoxicação?",
+                "a": "Exposição, cinética, dinâmica, clínica"
+              }
             ]
           },
           "lines": [
-            {"id": "m3-24", "speaker": "aluno", "text": "Se o corpo tem tudo isso, por que as pessoas pegam verme de novo?", "cues": []},
-            {"id": "m3-25", "speaker": "professor", "text": "Ótima pergunta. Porque os parasitas escapam. A Giardia faz variação antigênica, trocando suas proteínas de superfície.", "cues": [{"word": "variação", "target": "v1"}]},
-            {"id": "m3-26", "speaker": "professor", "text": "O Cryptosporidium se esconde dentro da célula. E o Ascaris muda de estágio, com antígenos diferentes na larva e no adulto.", "cues": [{"word": "esconde", "target": "v2"}, {"word": "estágio", "target": "v3"}]},
-            {"id": "m3-27", "speaker": "professor", "text": "Helmintos têm cutícula espessa e resistem ao complemento. E a Giardia tem proteases que clivam a imunoglobulina A.", "cues": [{"word": "cutícula", "target": "v4"}, {"word": "proteases", "target": "v5"}]},
-            {"id": "m3-28", "speaker": "professor", "text": "Por fim, helmintos induzem linfócitos T reguladores, interleucina 10 e TGF beta. Isso favorece a cronicidade e a reinfecção.", "cues": [{"word": "reguladores", "target": "v6"}]}
+            {
+              "id": "m3-28",
+              "speaker": "professor",
+              "text": "Alvo do dê-dê-tê e o sinal clássico?",
+              "cues": [
+                {
+                  "word": "Alvo",
+                  "target": "h1"
+                }
+              ]
+            },
+            {
+              "id": "m3-29",
+              "speaker": "professor",
+              "text": "Canal de sódio e tremor.",
+              "cues": [
+                {
+                  "word": "sódio",
+                  "target": "h1",
+                  "action": "solve"
+                }
+              ]
+            },
+            {
+              "id": "m3-30",
+              "speaker": "professor",
+              "text": "Alvo do lindano e o sinal clássico?",
+              "cues": [
+                {
+                  "word": "lindano",
+                  "target": "h2"
+                }
+              ]
+            },
+            {
+              "id": "m3-31",
+              "speaker": "professor",
+              "text": "Gaba a e convulsão.",
+              "cues": [
+                {
+                  "word": "Gaba",
+                  "target": "h2",
+                  "action": "solve"
+                }
+              ]
+            },
+            {
+              "id": "m3-32",
+              "speaker": "professor",
+              "text": "E as quatro fases da intoxicação?",
+              "cues": [
+                {
+                  "word": "fases",
+                  "target": "h3"
+                }
+              ]
+            },
+            {
+              "id": "m3-33",
+              "speaker": "professor",
+              "text": "Exposição, cinética, dinâmica e clínica.",
+              "cues": [
+                {
+                  "word": "Exposição",
+                  "target": "h3",
+                  "action": "solve"
+                }
+              ]
+            }
           ]
         },
         {
           "id": "m3s7",
-          "bloom": "Analisar",
+          "bloom": "Avaliar",
           "visual": {
-            "type": "quiz", "level": "Analisar",
-            "question": "Criança com tosse, sibilância e infiltrado pulmonar migratório; eosinofilia de 25%. Parasitológico de fezes negativo. Melhor explicação?",
-            "options": [
-              {"id": "a", "text": "Giardíase: resposta por IgA secretória"},
-              {"id": "b", "text": "Fase pulmonar do Ascaris: Th2 com larva no tecido"},
-              {"id": "c", "text": "Criptosporidiose: resposta Th1"},
-              {"id": "d", "text": "Afasta parasitose, pois as fezes são negativas"}
-            ],
-            "correct": "b",
-            "explanation": "Larva no tecido = eosinofilia máxima (Löffler). O exame de fezes só positiva 2 a 3 meses depois. Giardia não causa eosinofilia."
+            "type": "quote",
+            "text": "Sódio dá tremor, GABA dá convulsão. Dois alvos, um sistema nervoso excitado.",
+            "highlights": [
+              "tremor",
+              "convulsão"
+            ]
           },
           "lines": [
-            {"id": "m3-29", "speaker": "professor", "text": "Desafio. Uma criança tem tosse, chiado, infiltrado pulmonar que muda de lugar e eosinofilia alta. O exame de fezes veio negativo. O que explica?", "cues": [{"word": "Desafio", "target": "question"}, {"word": "explica", "target": "options"}]},
-            {"id": "m3-q1", "speaker": "pausa", "text": "", "pauseMs": 7000, "cues": []},
-            {"id": "m3-30", "speaker": "aluno", "text": "Se o exame de fezes é negativo, então não pode ser verme, né?", "cues": [{"word": "negativo", "target": "d", "action": "pick"}]},
-            {"id": "m3-31", "speaker": "professor", "text": "Aí está a pegadinha. Na fase pulmonar do Ascaris, a larva está no tecido, a eosinofilia é máxima, e o exame de fezes ainda é negativo.", "cues": [{"word": "pulmonar", "target": "answer"}, {"word": "tecido", "target": "explanation"}]},
-            {"id": "m3-32", "speaker": "professor", "text": "E lembre: Giardia não causa eosinofilia, porque fica na luz e não invade o tecido.", "cues": []}
-          ]
-        },
-        {
-          "id": "m3s8",
-          "bloom": "Compreender",
-          "visual": {"type": "quote", "text": "O corpo mata o que está dentro da célula (Th1) e expulsa o que é grande demais para ser engolido (Th2).", "highlights": ["mata", "Th1", "expulsa", "Th2"]},
-          "lines": [
-            {"id": "m3-33", "speaker": "professor", "text": "Resumindo: o corpo escolhe a estratégia pelo tamanho do inimigo. Mata o que está dentro da célula e expulsa o que é grande demais para ser engolido.", "cues": [{"word": "Resumindo", "target": "quote"}]}
+            {
+              "id": "m3-34",
+              "speaker": "professor",
+              "text": "Frase-chave: sódio dá tremor, gaba dá convulsão.",
+              "cues": [
+                {
+                  "word": "tremor",
+                  "target": "quote"
+                }
+              ]
+            }
           ]
         }
       ]
@@ -638,206 +2069,559 @@
     {
       "id": "m4",
       "number": 4,
-      "title": "Animais peçonhentos",
-      "subtitle": "Cada peçonha tem um alvo",
-      "color": "#FF5C7A",
+      "title": "Determinação da exposição",
+      "subtitle": "Como medir e vigiar",
+      "color": "#B388FF",
       "scenes": [
         {
           "id": "m4s1",
           "bloom": "Lembrar",
-          "visual": {"type": "opener", "kicker": "Módulo 4", "title": "Animais peçonhentos", "subtitle": "Peçonhento tem aparelho inoculador; venenoso só produz a toxina", "icon": "scorpion"},
+          "visual": {
+            "type": "compare",
+            "heading": "Duas frentes de monitoramento",
+            "left": {
+              "id": "A",
+              "title": "Ambiental",
+              "sub": "mede no ambiente",
+              "color": "#5AC8FA",
+              "items": [
+                {
+                  "id": "a1",
+                  "text": "Ar, água e solo"
+                },
+                {
+                  "id": "a2",
+                  "text": "Resíduos em alimentos"
+                },
+                {
+                  "id": "a3",
+                  "text": "Mostra o perigo externo"
+                }
+              ]
+            },
+            "right": {
+              "id": "B",
+              "title": "Biológico",
+              "sub": "mede no corpo",
+              "color": "#3DDC97",
+              "items": [
+                {
+                  "id": "b1",
+                  "text": "Sangue, soro e urina"
+                },
+                {
+                  "id": "b2",
+                  "text": "Leite e tecido adiposo"
+                },
+                {
+                  "id": "b3",
+                  "text": "Mostra a dose interna"
+                }
+              ]
+            },
+            "footer": {
+              "id": "band2",
+              "text": "Ambiental vê a fonte; biológico vê a pessoa"
+            }
+          },
           "lines": [
-            {"id": "m4-01", "speaker": "professor", "text": "Módulo quatro: acidentes por animais peçonhentos.", "cues": [{"word": "acidentes", "target": "title"}]},
-            {"id": "m4-02", "speaker": "aluno", "text": "Peçonhento e venenoso não são a mesma coisa?", "cues": []},
-            {"id": "m4-03", "speaker": "professor", "text": "Não. Peçonhento tem aparelho inoculador, como ferrão ou presa. Venenoso apenas produz a toxina, como o sapo.", "cues": [{"word": "inoculador", "target": "subtitle"}]}
+            {
+              "id": "m4-01",
+              "speaker": "professor",
+              "text": "Como provar que houve exposição? Em duas frentes.",
+              "cues": [
+                {
+                  "word": "duas",
+                  "target": "__heading"
+                }
+              ]
+            },
+            {
+              "id": "m4-02",
+              "speaker": "professor",
+              "text": "O monitoramento ambiental mede no ar, na água, no solo e nos alimentos.",
+              "cues": [
+                {
+                  "word": "ambiental",
+                  "target": "A"
+                },
+                {
+                  "word": "alimentos",
+                  "target": "a2"
+                }
+              ]
+            },
+            {
+              "id": "m4-03",
+              "speaker": "professor",
+              "text": "O monitoramento biológico mede no corpo: sangue, soro, urina, leite e gordura.",
+              "cues": [
+                {
+                  "word": "biológico",
+                  "target": "B"
+                },
+                {
+                  "word": "leite",
+                  "target": "b2"
+                }
+              ]
+            },
+            {
+              "id": "m4-04",
+              "speaker": "aluno",
+              "text": "Então um vê a fonte e o outro vê a pessoa.",
+              "cues": []
+            },
+            {
+              "id": "m4-05",
+              "speaker": "professor",
+              "text": "Perfeito: ambiental vê a fonte, biológico vê a pessoa.",
+              "cues": [
+                {
+                  "word": "ambiental",
+                  "target": "band2"
+                }
+              ]
+            }
           ]
         },
         {
           "id": "m4s2",
           "bloom": "Compreender",
           "visual": {
-            "type": "flow", "layout": "row", "heading": "Por que é um tema de saneamento",
+            "type": "flow",
+            "layout": "row",
+            "heading": "Os três biomarcadores",
             "nodes": [
-              {"id": "lixo", "label": "Lixo e entulho", "sub": "alimento e abrigo", "icon": "trash"},
-              {"id": "presas", "label": "Baratas e roedores", "sub": "proliferam no lixo", "icon": "bacteria"},
-              {"id": "pred", "label": "Escorpiões e serpentes", "sub": "seguem o alimento", "icon": "scorpion"},
-              {"id": "acid", "label": "Acidente domiciliar", "sub": "consequência ambiental", "icon": "alert"}
+              {
+                "id": "bm1",
+                "label": "Exposição",
+                "sub": "o tóxico ou metabólito",
+                "icon": "magnify"
+              },
+              {
+                "id": "bm2",
+                "label": "Efeito",
+                "sub": "alteração precoce",
+                "icon": "heart"
+              },
+              {
+                "id": "bm3",
+                "label": "Suscetibilidade",
+                "sub": "quem reage mais",
+                "icon": "dna"
+              }
+            ],
+            "chips": [
+              {
+                "id": "ch7",
+                "text": "DDE no soro = biomarcador de exposição clássico"
+              }
             ]
           },
           "lines": [
-            {"id": "m4-04", "speaker": "professor", "text": "E por que esse tema está numa tutoria de saneamento? Porque o lixo e o entulho atraem baratas e roedores.", "cues": [{"word": "lixo", "target": "lixo"}, {"word": "baratas", "target": "presas"}]},
-            {"id": "m4-05", "speaker": "professor", "text": "Baratas são alimento do escorpião, e roedores são alimento das serpentes. O acidente é uma consequência ambiental.", "cues": [{"word": "escorpião", "target": "pred"}, {"word": "consequência", "target": "acid"}]}
+            {
+              "id": "m4-06",
+              "speaker": "professor",
+              "text": "No monitoramento biológico há três tipos de biomarcador.",
+              "cues": [
+                {
+                  "word": "três",
+                  "target": "__heading"
+                }
+              ]
+            },
+            {
+              "id": "m4-07",
+              "speaker": "professor",
+              "text": "O de exposição mede o próprio tóxico ou seu metabólito.",
+              "cues": [
+                {
+                  "word": "exposição",
+                  "target": "bm1"
+                }
+              ]
+            },
+            {
+              "id": "m4-08",
+              "speaker": "professor",
+              "text": "O de efeito capta uma alteração biológica precoce.",
+              "cues": [
+                {
+                  "word": "efeito",
+                  "target": "bm2"
+                }
+              ]
+            },
+            {
+              "id": "m4-09",
+              "speaker": "professor",
+              "text": "E o de suscetibilidade diz quem tende a reagir mais, por genética ou condição.",
+              "cues": [
+                {
+                  "word": "suscetibilidade",
+                  "target": "bm3"
+                }
+              ]
+            },
+            {
+              "id": "m4-10",
+              "speaker": "aluno",
+              "text": "O dê-dê-é no soro seria de qual tipo?",
+              "cues": [
+                {
+                  "word": "soro",
+                  "target": "ch7"
+                }
+              ]
+            },
+            {
+              "id": "m4-11",
+              "speaker": "professor",
+              "text": "De exposição: ele mostra que o clorado entrou no corpo.",
+              "cues": [
+                {
+                  "word": "exposição",
+                  "target": "ch7"
+                }
+              ]
+            }
           ]
         },
         {
           "id": "m4s3",
           "bloom": "Compreender",
           "visual": {
-            "type": "profile", "animal": "Escorpião", "genus": "Tityus", "icon": "scorpion",
-            "rows": [
-              {"id": "mec", "label": "Peçonha", "text": "Neurotóxica: mantém canais de sódio abertos → descarga de acetilcolina e catecolaminas"},
-              {"id": "local", "label": "Local", "text": "Dor imediata e intensa, parestesia; pouco edema"},
-              {"id": "sist", "label": "Sistêmico", "text": "Vômitos, sudorese, sialorreia, taquicardia, hipertensão, arritmia, edema agudo de pulmão"},
-              {"id": "key", "label": "Gravidade", "text": "Vômito = gravidade. Crianças têm maior risco; óbito por choque cardiogênico e edema pulmonar"},
-              {"id": "tx", "label": "Conduta", "text": "Analgesia; soro antiescorpiônico (ou antiaracnídico) nos casos moderados e graves"}
+            "type": "flow",
+            "layout": "cycle",
+            "heading": "Da suspeita à vigilância (APS)",
+            "nodes": [
+              {
+                "id": "s1",
+                "label": "Suspeita na APS",
+                "sub": "história de exposição",
+                "icon": "house"
+              },
+              {
+                "id": "s2",
+                "label": "Notificação",
+                "sub": "SINAN, intoxicação exógena",
+                "icon": "alert"
+              },
+              {
+                "id": "s3",
+                "label": "Vigilância",
+                "sub": "saúde do trabalhador",
+                "icon": "shield"
+              },
+              {
+                "id": "s4",
+                "label": "Prevenção",
+                "sub": "EPI e rótulo",
+                "icon": "mask"
+              }
             ]
           },
           "lines": [
-            {"id": "m4-06", "speaker": "professor", "text": "Começamos pelo escorpião, o Tityus. A peçonha é neurotóxica: mantém os canais de sódio abertos, e há descarga de acetilcolina e catecolaminas.", "cues": [{"word": "neurotóxica", "target": "mec"}]},
-            {"id": "m4-07", "speaker": "professor", "text": "No local, dor imediata e intensa, com parestesia e pouco edema.", "cues": [{"word": "local", "target": "local"}]},
-            {"id": "m4-08", "speaker": "professor", "text": "No quadro sistêmico, vômitos, sudorese, sialorreia, taquicardia, hipertensão, arritmia e até edema agudo de pulmão.", "cues": [{"word": "sistêmico", "target": "sist"}]},
-            {"id": "m4-09", "speaker": "aluno", "text": "E como eu sei que o caso é grave?", "cues": []},
-            {"id": "m4-10", "speaker": "professor", "text": "Vômito é sinal de gravidade, principalmente em crianças. O tratamento é analgesia, e soro antiescorpiônico nos casos moderados e graves.", "cues": [{"word": "Vômito", "target": "key"}, {"word": "analgesia", "target": "tx"}]}
+            {
+              "id": "m4-12",
+              "speaker": "professor",
+              "text": "Na atenção primária, tudo começa pela suspeita, perguntando da exposição.",
+              "cues": [
+                {
+                  "word": "suspeita",
+                  "target": "s1"
+                }
+              ]
+            },
+            {
+              "id": "m4-13",
+              "speaker": "professor",
+              "text": "A intoxicação exógena é de notificação compulsória, registrada no sinan.",
+              "cues": [
+                {
+                  "word": "notificação",
+                  "target": "s2"
+                }
+              ]
+            },
+            {
+              "id": "m4-14",
+              "speaker": "professor",
+              "text": "A notificação alimenta a vigilância em saúde do trabalhador.",
+              "cues": [
+                {
+                  "word": "vigilância",
+                  "target": "s3"
+                }
+              ]
+            },
+            {
+              "id": "m4-15",
+              "speaker": "aluno",
+              "text": "E a prevenção fecha o ciclo com equipamento e rótulo.",
+              "cues": [
+                {
+                  "word": "prevenção",
+                  "target": "s4"
+                }
+              ]
+            },
+            {
+              "id": "m4-16",
+              "speaker": "professor",
+              "text": "Isso: o equipamento de proteção e as faixas de toxicidade do rótulo.",
+              "cues": [
+                {
+                  "word": "faixas",
+                  "target": "s4"
+                }
+              ]
+            },
+            {
+              "id": "m4-16b",
+              "speaker": "aluno",
+              "text": "E no rótulo, aquelas faixas coloridas dizem o quê?",
+              "cues": []
+            },
+            {
+              "id": "m4-16c",
+              "speaker": "professor",
+              "text": "A toxicidade. A classificação foi atualizada, então sempre confira a faixa do rótulo atual.",
+              "cues": [
+                {
+                  "word": "toxicidade",
+                  "target": "s4"
+                }
+              ]
+            },
+            {
+              "id": "m4-16d",
+              "speaker": "professor",
+              "text": "E o equipamento de proteção é a barreira contra a via dérmica: luva, máscara e roupa adequada.",
+              "cues": [
+                {
+                  "word": "proteção",
+                  "target": "s4"
+                }
+              ]
+            }
           ]
         },
         {
           "id": "m4s4",
-          "bloom": "Analisar",
+          "bloom": "Aplicar",
           "visual": {
-            "type": "compare", "heading": "Jararaca × cascavel",
-            "left": {"id": "left", "title": "Jararaca", "sub": "Bothrops", "color": "#FF9F1C", "items": [
-              {"id": "l1", "text": "Proteolítica, coagulante e hemorrágica"},
-              {"id": "l2", "text": "Local exuberante: dor, edema, equimose, bolhas, necrose; risco de síndrome compartimental"},
-              {"id": "l3", "text": "Sangue incoagulável, sangramentos, choque, insuficiência renal"},
-              {"id": "l4", "text": "Soro antibotrópico"}
-            ]},
-            "right": {"id": "right", "title": "Cascavel", "sub": "Crotalus", "color": "#B388FF", "items": [
-              {"id": "r1", "text": "Pouca dor e pouco edema; parestesia"},
-              {"id": "r2", "text": "Crotoxina: neurotóxica, miotóxica e coagulante"},
-              {"id": "r3", "text": "Fácies miastênica: ptose, diplopia; mialgia"},
-              {"id": "r4", "text": "Urina escura (mioglobina) → insuficiência renal: maior letalidade"},
-              {"id": "r5", "text": "Soro anticrotálico + hidratação venosa"}
-            ]}
+            "type": "quiz",
+            "level": "Aplicar",
+            "question": "Para confirmar a dose interna de clorado num trabalhador, o que você pede?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Amostra de solo da lavoura"
+              },
+              {
+                "id": "b",
+                "text": "DDE no soro do paciente"
+              },
+              {
+                "id": "c",
+                "text": "Resíduo no alimento colhido"
+              },
+              {
+                "id": "d",
+                "text": "Água do poço da fazenda"
+              }
+            ],
+            "correct": "b",
+            "explanation": "Dose interna = monitoramento biológico. Solo, alimento e água são ambientais, mostram a fonte, não a pessoa."
           },
           "lines": [
-            {"id": "m4-11", "speaker": "professor", "text": "Agora as serpentes. A jararaca, Bothrops, tem peçonha proteolítica, coagulante e hemorrágica.", "cues": [{"word": "jararaca", "target": "left"}, {"word": "proteolítica", "target": "l1"}]},
-            {"id": "m4-12", "speaker": "professor", "text": "O local é exuberante: dor, edema, equimose, bolhas e necrose, com risco de síndrome compartimental.", "cues": [{"word": "exuberante", "target": "l2"}]},
-            {"id": "m4-13", "speaker": "professor", "text": "No sistêmico, o sangue fica incoagulável, com sangramentos, choque e insuficiência renal. O soro é o antibotrópico.", "cues": [{"word": "incoagulável", "target": "l3"}, {"word": "antibotrópico", "target": "l4"}]},
-            {"id": "m4-14", "speaker": "aluno", "text": "Então a cascavel também incha muito, já que é uma cobra mais perigosa?", "cues": []},
-            {"id": "m4-15", "speaker": "professor", "text": "É o contrário. A cascavel, Crotalus, dá pouca dor e pouco edema no local.", "cues": [{"word": "cascavel", "target": "right"}, {"word": "pouca", "target": "r1"}]},
-            {"id": "m4-16", "speaker": "professor", "text": "A crotoxina é neurotóxica e miotóxica. Causa a fácies miastênica, com pálpebras caídas e visão dupla, além de dor muscular.", "cues": [{"word": "crotoxina", "target": "r2"}, {"word": "fácies", "target": "r3"}]},
-            {"id": "m4-17", "speaker": "professor", "text": "A destruição muscular libera mioglobina, e a urina fica escura. A morte vem por insuficiência renal. O soro é o anticrotálico, com hidratação venosa.", "cues": [{"word": "urina", "target": "r4"}, {"word": "anticrotálico", "target": "r5"}]}
+            {
+              "id": "m4-17",
+              "speaker": "professor",
+              "text": "Desafio. Você quer a dose interna do trabalhador. O que pede?",
+              "cues": [
+                {
+                  "word": "Desafio",
+                  "target": "__tag"
+                },
+                {
+                  "word": "interna",
+                  "target": "question"
+                }
+              ]
+            },
+            {
+              "id": "m4-18",
+              "speaker": "professor",
+              "text": "Separe o que é ambiental do que é biológico.",
+              "cues": [
+                {
+                  "word": "ambiental",
+                  "target": "options"
+                }
+              ]
+            },
+            {
+              "id": "m4-pause",
+              "speaker": "pausa",
+              "pauseMs": 7000,
+              "cues": []
+            },
+            {
+              "id": "m4-19",
+              "speaker": "aluno",
+              "text": "Vou pedir o resíduo no alimento colhido.",
+              "cues": [
+                {
+                  "word": "alimento",
+                  "target": "c"
+                }
+              ]
+            },
+            {
+              "id": "m4-20",
+              "speaker": "professor",
+              "text": "Esse é ambiental: mostra a fonte, não a dose da pessoa.",
+              "cues": []
+            },
+            {
+              "id": "m4-21",
+              "speaker": "professor",
+              "text": "A dose interna é o dê-dê-é no soro, um exame biológico.",
+              "cues": [
+                {
+                  "word": "soro",
+                  "target": "answer"
+                },
+                {
+                  "word": "biológico",
+                  "target": "explanation"
+                }
+              ]
+            }
           ]
         },
         {
           "id": "m4s5",
-          "bloom": "Compreender",
+          "bloom": "Lembrar",
           "visual": {
-            "type": "profile", "animal": "Aranha-marrom", "genus": "Loxosceles", "icon": "spider",
-            "rows": [
-              {"id": "mec", "label": "Peçonha", "text": "Esfingomielinase D: dermonecrótica e hemolítica"},
-              {"id": "local", "label": "Local", "text": "Picada indolor; em 12 a 24 h surge a placa marmórea → necrose → úlcera"},
-              {"id": "sist", "label": "Sistêmico", "text": "Forma cutâneo-hemolítica (rara): hemólise, icterícia, hemoglobinúria, insuficiência renal"},
-              {"id": "tx", "label": "Conduta", "text": "Corticoide; soro antiloxoscélico ou antiaracnídico conforme a gravidade"}
+            "type": "flashcards",
+            "heading": "Flashcards relâmpago",
+            "cards": [
+              {
+                "id": "i1",
+                "q": "Monitoramento que vê a fonte?",
+                "a": "Ambiental (ar, água, solo, alimento)"
+              },
+              {
+                "id": "i2",
+                "q": "Os 3 biomarcadores?",
+                "a": "Exposição, efeito, suscetibilidade"
+              },
+              {
+                "id": "i3",
+                "q": "Onde se notifica a intoxicação?",
+                "a": "SINAN (notificação compulsória)"
+              }
             ]
           },
           "lines": [
-            {"id": "m4-18", "speaker": "professor", "text": "A aranha-marrom, Loxosceles, tem uma enzima chamada esfingomielinase D, que é dermonecrótica e hemolítica.", "cues": [{"word": "esfingomielinase", "target": "mec"}]},
-            {"id": "m4-19", "speaker": "professor", "text": "A picada é indolor. Só doze a vinte e quatro horas depois surge a placa marmórea, que evolui para necrose e úlcera.", "cues": [{"word": "placa", "target": "local"}]},
-            {"id": "m4-20", "speaker": "professor", "text": "Raramente há a forma hemolítica, com icterícia, urina escura por hemoglobina e insuficiência renal.", "cues": [{"word": "hemolítica", "target": "sist"}]},
-            {"id": "m4-21", "speaker": "professor", "text": "O tratamento usa corticoide e soro, conforme a gravidade.", "cues": [{"word": "corticoide", "target": "tx"}]}
+            {
+              "id": "m4-22",
+              "speaker": "professor",
+              "text": "Qual monitoramento vê a fonte?",
+              "cues": [
+                {
+                  "word": "fonte",
+                  "target": "i1"
+                }
+              ]
+            },
+            {
+              "id": "m4-23",
+              "speaker": "professor",
+              "text": "O ambiental.",
+              "cues": [
+                {
+                  "word": "ambiental",
+                  "target": "i1",
+                  "action": "solve"
+                }
+              ]
+            },
+            {
+              "id": "m4-24",
+              "speaker": "professor",
+              "text": "Os três biomarcadores?",
+              "cues": [
+                {
+                  "word": "biomarcadores",
+                  "target": "i2"
+                }
+              ]
+            },
+            {
+              "id": "m4-25",
+              "speaker": "professor",
+              "text": "Exposição, efeito e suscetibilidade.",
+              "cues": [
+                {
+                  "word": "Exposição",
+                  "target": "i2",
+                  "action": "solve"
+                }
+              ]
+            },
+            {
+              "id": "m4-26",
+              "speaker": "professor",
+              "text": "E onde se notifica a intoxicação?",
+              "cues": [
+                {
+                  "word": "notifica",
+                  "target": "i3"
+                }
+              ]
+            },
+            {
+              "id": "m4-27",
+              "speaker": "professor",
+              "text": "No sinan, por notificação compulsória.",
+              "cues": [
+                {
+                  "word": "sinan",
+                  "target": "i3",
+                  "action": "solve"
+                }
+              ]
+            }
           ]
         },
         {
           "id": "m4s6",
-          "bloom": "Analisar",
+          "bloom": "Compreender",
           "visual": {
-            "type": "profile", "animal": "Abelha", "genus": "Apis mellifera", "icon": "bee",
-            "rows": [
-              {"id": "mec", "label": "Peçonha", "text": "Melitina, fosfolipase A2 e hialuronidase"},
-              {"id": "alerg", "label": "Alérgico", "text": "Uma picada pode causar anafilaxia (IgE) → adrenalina intramuscular"},
-              {"id": "tox", "label": "Tóxico", "text": "Centenas de picadas: hemólise, rabdomiólise, insuficiência renal → suporte"},
-              {"id": "key", "label": "Ferrão", "text": "Retirar raspando com lâmina, sem pinçar (não espremer a glândula)"}
+            "type": "quote",
+            "text": "Ambiental mede a fonte, biológico mede a pessoa, e a notificação liga à vigilância.",
+            "highlights": [
+              "fonte",
+              "pessoa"
             ]
           },
           "lines": [
-            {"id": "m4-22", "speaker": "professor", "text": "E a abelha. A peçonha tem melitina, fosfolipase A2 e hialuronidase, e pode causar dois quadros diferentes.", "cues": [{"word": "melitina", "target": "mec"}]},
-            {"id": "m4-23", "speaker": "professor", "text": "Um é alérgico: uma única picada pode causar anafilaxia, mediada por imunoglobulina E. O tratamento é adrenalina intramuscular.", "cues": [{"word": "alérgico", "target": "alerg"}]},
-            {"id": "m4-24", "speaker": "professor", "text": "O outro é tóxico: centenas de picadas causam hemólise, rabdomiólise e insuficiência renal.", "cues": [{"word": "tóxico", "target": "tox"}]},
-            {"id": "m4-25", "speaker": "professor", "text": "E o ferrão deve ser retirado raspando, sem pinçar, para não espremer mais veneno.", "cues": [{"word": "raspando", "target": "key"}]}
-          ]
-        },
-        {
-          "id": "m4s7",
-          "bloom": "Analisar",
-          "visual": {
-            "type": "flow", "layout": "hub", "heading": "O rim une os acidentes graves",
-            "nodes": [
-              {"id": "center", "label": "Necrose tubular aguda", "sub": "insuficiência renal aguda", "icon": "kidney"},
-              {"id": "s1", "label": "Rabdomiólise", "sub": "cascavel, abelhas (mioglobina)", "icon": "target"},
-              {"id": "s2", "label": "Hemólise", "sub": "aranha-marrom, abelhas (hemoglobina)", "icon": "drop"},
-              {"id": "s3", "label": "Hipovolemia", "sub": "jararaca (sangramento, choque)", "icon": "heart"}
-            ],
-            "inward": true
-          },
-          "lines": [
-            {"id": "m4-26", "speaker": "professor", "text": "Perceba o padrão: o rim une os acidentes graves.", "cues": [{"word": "rim", "target": "center"}]},
-            {"id": "m4-27", "speaker": "professor", "text": "Rabdomiólise na cascavel e nas abelhas, hemólise na aranha-marrom e nas abelhas, e hipovolemia na jararaca.", "cues": [{"word": "Rabdomiólise", "target": "s1"}, {"word": "hemólise", "target": "s2"}, {"word": "hipovolemia", "target": "s3"}]},
-            {"id": "m4-28", "speaker": "professor", "text": "Os três caminhos levam à necrose tubular aguda.", "cues": [{"word": "necrose", "target": "center", "action": "highlight"}]}
-          ]
-        },
-        {
-          "id": "m4s8",
-          "bloom": "Aplicar",
-          "visual": {
-            "type": "compare", "heading": "Soro e primeiros socorros",
-            "left": {"id": "left", "title": "Soro antiveneno", "sub": "específico por gênero", "color": "#7C9CFF", "items": [
-              {"id": "l1", "text": "Dose pela gravidade, não pelo peso"},
-              {"id": "l2", "text": "Via venosa, com suporte para anafilaxia"},
-              {"id": "l3", "text": "Neutraliza a peçonha circulante; não desfaz necrose instalada"}
-            ]},
-            "right": {"id": "right", "title": "Primeiros socorros", "sub": "e o que NÃO fazer", "color": "#7BD389", "items": [
-              {"id": "r1", "text": "Lavar com água e sabão, repouso, procurar o serviço de saúde"},
-              {"id": "r2", "text": "NÃO: torniquete, cortar, sugar ou aplicar substâncias", "bad": true},
-              {"id": "r3", "text": "Notificação compulsória"}
-            ]}
-          },
-          "lines": [
-            {"id": "m4-29", "speaker": "aluno", "text": "E o soro? A dose é pelo peso, como os outros remédios da criança?", "cues": [{"word": "soro", "target": "left"}]},
-            {"id": "m4-30", "speaker": "professor", "text": "Não. A dose do soro depende da gravidade, e não do peso. Ele é específico para cada gênero e é dado na veia.", "cues": [{"word": "gravidade", "target": "l1"}, {"word": "veia", "target": "l2"}]},
-            {"id": "m4-31", "speaker": "professor", "text": "Ele neutraliza a peçonha que circula, mas não desfaz a necrose que já se instalou.", "cues": [{"word": "neutraliza", "target": "l3"}]},
-            {"id": "m4-32", "speaker": "professor", "text": "Nos primeiros socorros: lave com água e sabão, mantenha repouso e procure o serviço de saúde.", "cues": [{"word": "socorros", "target": "right"}, {"word": "lave", "target": "r1"}]},
-            {"id": "m4-33", "speaker": "professor", "text": "Não faça torniquete, não corte, não sugue e não aplique nenhuma substância. E o acidente é de notificação compulsória.", "cues": [{"word": "torniquete", "target": "r2"}, {"word": "notificação", "target": "r3"}]}
-          ]
-        },
-        {
-          "id": "m4s9",
-          "bloom": "Analisar",
-          "visual": {
-            "type": "quiz", "level": "Analisar",
-            "question": "Lavrador picado no pé há 3 horas: pouca dor, quase sem edema, pálpebras caídas, visão dupla e urina escura. Qual o gênero e o soro?",
-            "options": [
-              {"id": "a", "text": "Bothrops: soro antibotrópico"},
-              {"id": "b", "text": "Crotalus: soro anticrotálico"},
-              {"id": "c", "text": "Loxosceles: soro antiloxoscélico"},
-              {"id": "d", "text": "Tityus: soro antiescorpiônico"}
-            ],
-            "correct": "b",
-            "explanation": "Local pobre + fácies miastênica (ptose, diplopia) + mioglobinúria = Crotalus. Hidratação venosa para proteger o rim."
-          },
-          "lines": [
-            {"id": "m4-34", "speaker": "professor", "text": "Desafio do módulo. Um lavrador foi picado no pé. Tem pouca dor, quase sem edema, pálpebras caídas, visão dupla e urina escura. Qual o animal e o soro?", "cues": [{"word": "Desafio", "target": "question"}, {"word": "animal", "target": "options"}]},
-            {"id": "m4-q1", "speaker": "pausa", "text": "", "pauseMs": 7000, "cues": []},
-            {"id": "m4-35", "speaker": "aluno", "text": "Urina escura... não seria a aranha-marrom, por hemólise?", "cues": [{"word": "aranha-marrom", "target": "c", "action": "pick"}]},
-            {"id": "m4-36", "speaker": "professor", "text": "Bom raciocínio, mas olhe o conjunto. Pálpebras caídas, visão dupla e local pobre apontam para a cascavel. A urina escura é mioglobina. Soro anticrotálico.", "cues": [{"word": "cascavel", "target": "answer"}, {"word": "mioglobina", "target": "explanation"}]}
-          ]
-        },
-        {
-          "id": "m4s10",
-          "bloom": "Lembrar",
-          "visual": {
-            "type": "cards", "heading": "Cada peçonha tem um alvo", "columns": 5,
-            "items": [
-              {"id": "t1", "title": "Nervo", "body": "escorpião", "icon": "scorpion"},
-              {"id": "t2", "title": "Coagulação", "body": "jararaca", "icon": "drop"},
-              {"id": "t3", "title": "Junção neuromuscular e músculo", "body": "cascavel", "icon": "target"},
-              {"id": "t4", "title": "Pele e hemácia", "body": "aranha-marrom", "icon": "spider"},
-              {"id": "t5", "title": "Mastócito", "body": "abelha", "icon": "bee"}
-            ]
-          },
-          "lines": [
-            {"id": "m4-37", "speaker": "professor", "text": "Para fixar: cada peçonha tem um alvo. Nervo no escorpião, coagulação na jararaca.", "cues": [{"word": "Nervo", "target": "t1"}, {"word": "coagulação", "target": "t2"}]},
-            {"id": "m4-38", "speaker": "professor", "text": "Junção neuromuscular e músculo na cascavel, pele e hemácia na aranha-marrom, e mastócito na abelha.", "cues": [{"word": "Junção", "target": "t3"}, {"word": "pele", "target": "t4"}, {"word": "mastócito", "target": "t5"}]}
+            {
+              "id": "m4-28",
+              "speaker": "professor",
+              "text": "Frase-chave: ambiental mede a fonte, biológico mede a pessoa.",
+              "cues": [
+                {
+                  "word": "fonte",
+                  "target": "quote"
+                }
+              ]
+            }
           ]
         }
       ]
@@ -845,186 +2629,456 @@
     {
       "id": "m5",
       "number": 5,
-      "title": "Descarte correto de resíduos sólidos",
-      "subtitle": "Acondicionar, coletar, tratar e dispor só o rejeito",
-      "color": "#7BD389",
+      "title": "Ambiente",
+      "subtitle": "Resíduo, solo, água e descontaminação",
+      "color": "#FFB703",
       "scenes": [
         {
           "id": "m5s1",
-          "bloom": "Lembrar",
-          "visual": {"type": "opener", "kicker": "Módulo 5", "title": "Descarte correto de resíduos sólidos", "subtitle": "Cada etapa fecha uma porta pela qual o lixo adoece", "icon": "recycle"},
+          "bloom": "Compreender",
+          "visual": {
+            "type": "contamcycle",
+            "heading": "O ciclo do contaminante"
+          },
           "lines": [
-            {"id": "m5-01", "speaker": "professor", "text": "Módulo cinco: o descarte correto dos resíduos sólidos.", "cues": [{"word": "descarte", "target": "title"}]},
-            {"id": "m5-02", "speaker": "professor", "text": "O manejo segue uma sequência, e cada etapa fecha uma porta pela qual o lixo adoece as pessoas.", "cues": [{"word": "etapa", "target": "subtitle"}]}
+            {
+              "id": "m5-01",
+              "speaker": "professor",
+              "text": "O clorado não fica parado: ele circula entre solo, água e alimento.",
+              "cues": [
+                {
+                  "word": "circula",
+                  "target": "__heading"
+                }
+              ]
+            },
+            {
+              "id": "m5-02",
+              "speaker": "professor",
+              "text": "Do solo contaminado ele escorre para a água e chega ao lençol freático.",
+              "cues": [
+                {
+                  "word": "solo",
+                  "target": "soil"
+                },
+                {
+                  "word": "água",
+                  "target": "water"
+                }
+              ]
+            },
+            {
+              "id": "m5-03",
+              "speaker": "professor",
+              "text": "A planta absorve, o animal come, e o resíduo volta ao ser humano.",
+              "cues": [
+                {
+                  "word": "planta",
+                  "target": "plant"
+                },
+                {
+                  "word": "humano",
+                  "target": "human"
+                }
+              ]
+            },
+            {
+              "id": "m5-04",
+              "speaker": "aluno",
+              "text": "E por ser persistente, esse ciclo dura anos.",
+              "cues": []
+            },
+            {
+              "id": "m5-05",
+              "speaker": "professor",
+              "text": "Por décadas. O solo vira um reservatório de longa duração.",
+              "cues": [
+                {
+                  "word": "reservatório",
+                  "target": "warn"
+                }
+              ]
+            }
           ]
         },
         {
           "id": "m5s2",
           "bloom": "Compreender",
           "visual": {
-            "type": "flow", "layout": "row", "heading": "A sequência do manejo",
-            "hero": {"title": "Como o lixo adoece", "body": "abriga vetores · acumula água · chorume no solo e na água · fumaça quando queimado"},
-            "nodes": [
-              {"id": "n1", "label": "Acondicionar", "sub": "saco fechado, tampa, longe do chão", "icon": "trash"},
-              {"id": "n2", "label": "Coletar", "sub": "regular e seletiva", "icon": "house"},
-              {"id": "n3", "label": "Tratar ou reciclar", "sub": "triagem, compostagem", "icon": "recycle"},
-              {"id": "n4", "label": "Dispor o rejeito", "sub": "somente em aterro sanitário", "icon": "landfill"}
-            ]
+            "type": "landfill",
+            "heading": "Manejo correto de resíduos industriais"
           },
           "lines": [
-            {"id": "m5-03", "speaker": "professor", "text": "O lixo adoece por quatro vias: abriga vetores, acumula água, contamina o solo e a água com chorume, e polui o ar quando é queimado.", "cues": [{"word": "adoece", "target": "hero"}]},
-            {"id": "m5-04", "speaker": "professor", "text": "Por isso, a sequência é: acondicionar, coletar, tratar ou reciclar, e só então dispor o rejeito no aterro sanitário.", "cues": [{"word": "acondicionar", "target": "n1"}, {"word": "coletar", "target": "n2"}, {"word": "tratar", "target": "n3"}, {"word": "dispor", "target": "n4"}]}
+            {
+              "id": "m5-06",
+              "speaker": "professor",
+              "text": "O resíduo industrial de clorado é perigoso e exige destino seguro.",
+              "cues": [
+                {
+                  "word": "perigoso",
+                  "target": "__heading"
+                }
+              ]
+            },
+            {
+              "id": "m5-07",
+              "speaker": "professor",
+              "text": "O aterro industrial tem camadas de impermeabilização para isolar o solo.",
+              "cues": [
+                {
+                  "word": "impermeabilização",
+                  "target": "liner"
+                }
+              ]
+            },
+            {
+              "id": "m5-08",
+              "speaker": "professor",
+              "text": "O chorume é coletado por drenos e tratado, não solto no ambiente.",
+              "cues": [
+                {
+                  "word": "chorume",
+                  "target": "leachate"
+                }
+              ]
+            },
+            {
+              "id": "m5-09",
+              "speaker": "aluno",
+              "text": "E o clorado em si, como se destrói?",
+              "cues": []
+            },
+            {
+              "id": "m5-10",
+              "speaker": "professor",
+              "text": "Por incineração em alta temperatura, com controle de emissão, nunca a céu aberto.",
+              "cues": [
+                {
+                  "word": "incineração",
+                  "target": "incinerate"
+                }
+              ]
+            }
           ]
         },
         {
           "id": "m5s3",
-          "bloom": "Compreender",
+          "bloom": "Avaliar",
           "visual": {
-            "type": "flow", "layout": "stairs", "heading": "PNRS (Lei 12.305/2010): ordem de prioridade",
+            "type": "flow",
+            "layout": "stairs",
+            "heading": "Descontaminação: hierarquia das medidas",
             "nodes": [
-              {"id": "n1", "label": "Não geração", "sub": "", "icon": "cross"},
-              {"id": "n2", "label": "Redução", "sub": "", "icon": "arrowdown"},
-              {"id": "n3", "label": "Reutilização", "sub": "", "icon": "recycle"},
-              {"id": "n4", "label": "Reciclagem", "sub": "", "icon": "recycle"},
-              {"id": "n5", "label": "Tratamento", "sub": "", "icon": "flask"},
-              {"id": "n6", "label": "Disposição final", "sub": "apenas rejeitos", "icon": "landfill"}
+              {
+                "id": "d1",
+                "label": "Prevenir e conter",
+                "sub": "não deixar espalhar"
+              },
+              {
+                "id": "d2",
+                "label": "Remover a fonte",
+                "sub": "retirar solo/estoque"
+              },
+              {
+                "id": "d3",
+                "label": "Tratar",
+                "sub": "bio e físico-química"
+              },
+              {
+                "id": "d4",
+                "label": "Monitorar",
+                "sub": "vigilância longa"
+              }
             ],
-            "chips": [{"id": "rev", "text": "Responsabilidade compartilhada e logística reversa: pilhas, baterias, pneus, eletrônicos, lâmpadas"}]
+            "chips": [
+              {
+                "id": "ch8",
+                "text": "Biorremediação: micro-organismos degradam o resíduo"
+              }
+            ]
           },
           "lines": [
-            {"id": "m5-05", "speaker": "professor", "text": "A Política Nacional de Resíduos Sólidos, de 2010, define uma ordem de prioridade.", "cues": []},
-            {"id": "m5-06", "speaker": "professor", "text": "Primeiro, não gerar. Depois, reduzir, reutilizar e reciclar.", "cues": [{"word": "gerar", "target": "n1"}, {"word": "reduzir", "target": "n2"}, {"word": "reutilizar", "target": "n3"}, {"word": "reciclar", "target": "n4"}]},
-            {"id": "m5-07", "speaker": "professor", "text": "Em seguida, tratar. E, por último, a disposição final, apenas dos rejeitos.", "cues": [{"word": "tratar", "target": "n5"}, {"word": "disposição", "target": "n6"}]},
-            {"id": "m5-08", "speaker": "aluno", "text": "Resíduo e rejeito são sinônimos?", "cues": []},
-            {"id": "m5-09", "speaker": "professor", "text": "Não. Resíduo ainda pode ser aproveitado. Rejeito é o que não tem mais aproveitamento, e só ele vai para o aterro.", "cues": [{"word": "Rejeito", "target": "n6", "action": "highlight"}]},
-            {"id": "m5-10", "speaker": "professor", "text": "A lei também prevê responsabilidade compartilhada e logística reversa, para pilhas, baterias, pneus, eletrônicos e lâmpadas.", "cues": [{"word": "logística", "target": "rev"}]}
+            {
+              "id": "m5-11",
+              "speaker": "professor",
+              "text": "A descontaminação ambiental segue uma hierarquia.",
+              "cues": [
+                {
+                  "word": "hierarquia",
+                  "target": "__heading"
+                }
+              ]
+            },
+            {
+              "id": "m5-12",
+              "speaker": "professor",
+              "text": "Primeiro conter, para o contaminante não se espalhar.",
+              "cues": [
+                {
+                  "word": "conter",
+                  "target": "d1"
+                }
+              ]
+            },
+            {
+              "id": "m5-13",
+              "speaker": "professor",
+              "text": "Depois remover a fonte e tratar o que ficou.",
+              "cues": [
+                {
+                  "word": "remover",
+                  "target": "d2"
+                },
+                {
+                  "word": "tratar",
+                  "target": "d3"
+                }
+              ]
+            },
+            {
+              "id": "m5-14",
+              "speaker": "professor",
+              "text": "E monitorar por muito tempo, porque o clorado é persistente.",
+              "cues": [
+                {
+                  "word": "monitorar",
+                  "target": "d4"
+                }
+              ]
+            },
+            {
+              "id": "m5-15",
+              "speaker": "aluno",
+              "text": "Dá para usar micro-organismos para degradar?",
+              "cues": []
+            },
+            {
+              "id": "m5-16",
+              "speaker": "professor",
+              "text": "Sim, é a biorremediação: micróbios que quebram o resíduo.",
+              "cues": [
+                {
+                  "word": "biorremediação",
+                  "target": "ch8"
+                }
+              ]
+            }
           ]
         },
         {
           "id": "m5s4",
-          "bloom": "Aplicar",
+          "bloom": "Avaliar",
           "visual": {
-            "type": "cards", "heading": "Acondicionamento e coleta na prática", "columns": 3,
-            "items": [
-              {"id": "a1", "title": "Sacos fechados", "body": "recipiente com tampa, elevado do chão e longe de poços", "icon": "trash"},
-              {"id": "a2", "title": "Separar na fonte", "body": "seco, orgânico e rejeito", "icon": "recycle"},
-              {"id": "a3", "title": "Hora certa", "body": "colocar para fora só perto do horário da coleta", "icon": "clock"},
-              {"id": "a4", "title": "Embalar cortantes", "body": "vidros e objetos cortantes protegidos", "icon": "alert"},
-              {"id": "a5", "title": "Coleta regular", "body": "frequência que não deixe acumular; seletiva para recicláveis", "icon": "house"},
-              {"id": "a6", "title": "Ecopontos", "body": "entulho e volumosos", "icon": "landfill"}
-            ]
+            "type": "quiz",
+            "level": "Avaliar",
+            "question": "Solo de uma antiga fábrica está contaminado por clorado. Qual é a primeira medida?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Plantar alimentos para diluir"
+              },
+              {
+                "id": "b",
+                "text": "Conter para não espalhar"
+              },
+              {
+                "id": "c",
+                "text": "Esperar degradar sozinho"
+              },
+              {
+                "id": "d",
+                "text": "Lavar com água para o rio"
+              }
+            ],
+            "correct": "b",
+            "explanation": "A hierarquia começa por conter. Lavar para o rio ou plantar espalha o contaminante; esperar não resolve, pois é persistente."
           },
           "lines": [
-            {"id": "m5-11", "speaker": "professor", "text": "No acondicionamento, use sacos resistentes e fechados, em recipiente com tampa, elevado do chão e longe de poços.", "cues": [{"word": "sacos", "target": "a1"}]},
-            {"id": "m5-12", "speaker": "professor", "text": "Separe seco, orgânico e rejeito, e coloque o lixo para fora só perto do horário da coleta. Embale vidros e objetos cortantes.", "cues": [{"word": "Separe", "target": "a2"}, {"word": "horário", "target": "a3"}, {"word": "vidros", "target": "a4"}]},
-            {"id": "m5-13", "speaker": "professor", "text": "A coleta precisa ser regular, com coleta seletiva dos recicláveis. Entulho e volumosos vão para os ecopontos.", "cues": [{"word": "regular", "target": "a5"}, {"word": "Entulho", "target": "a6"}]}
+            {
+              "id": "m5-17",
+              "speaker": "professor",
+              "text": "Desafio de avaliar. Solo contaminado de fábrica velha. Primeira medida?",
+              "cues": [
+                {
+                  "word": "Desafio",
+                  "target": "__tag"
+                },
+                {
+                  "word": "contaminado",
+                  "target": "question"
+                }
+              ]
+            },
+            {
+              "id": "m5-18",
+              "speaker": "professor",
+              "text": "Pense na hierarquia que acabamos de ver.",
+              "cues": [
+                {
+                  "word": "hierarquia",
+                  "target": "options"
+                }
+              ]
+            },
+            {
+              "id": "m5-pause",
+              "speaker": "pausa",
+              "pauseMs": 7000,
+              "cues": []
+            },
+            {
+              "id": "m5-19",
+              "speaker": "aluno",
+              "text": "Talvez esperar degradar sozinho?",
+              "cues": [
+                {
+                  "word": "esperar",
+                  "target": "c"
+                }
+              ]
+            },
+            {
+              "id": "m5-20",
+              "speaker": "professor",
+              "text": "Mas ele é persistente: esperar só prolonga o risco.",
+              "cues": []
+            },
+            {
+              "id": "m5-21",
+              "speaker": "professor",
+              "text": "A primeira medida é conter, para não espalhar.",
+              "cues": [
+                {
+                  "word": "conter",
+                  "target": "answer"
+                },
+                {
+                  "word": "espalhar",
+                  "target": "explanation"
+                }
+              ]
+            }
           ]
         },
         {
           "id": "m5s5",
-          "bloom": "Analisar",
-          "visual": {"type": "landfill", "heading": "Lixão × aterro controlado × aterro sanitário"},
+          "bloom": "Compreender",
+          "visual": {
+            "type": "flashcards",
+            "heading": "Flashcards relâmpago",
+            "cards": [
+              {
+                "id": "j1",
+                "q": "Camada-chave do aterro industrial?",
+                "a": "Impermeabilização + coleta de chorume"
+              },
+              {
+                "id": "j2",
+                "q": "Como destruir o clorado?",
+                "a": "Incineração controlada de alta temperatura"
+              },
+              {
+                "id": "j3",
+                "q": "1ª medida de descontaminação?",
+                "a": "Conter para não espalhar"
+              }
+            ]
+          },
           "lines": [
-            {"id": "m5-14", "speaker": "professor", "text": "Agora uma comparação que cai em prova: lixão, aterro controlado e aterro sanitário.", "cues": [{"word": "lixão", "target": "lixao"}, {"word": "controlado", "target": "controlado"}, {"word": "sanitário", "target": "sanitario"}]},
-            {"id": "m5-15", "speaker": "professor", "text": "O lixão é lixo a céu aberto. O chorume infiltra no solo e no lençol freático, o metano escapa, e há moscas, ratos, baratas e urubus.", "cues": [{"word": "chorume", "target": "chorume"}, {"word": "metano", "target": "gas"}, {"word": "moscas", "target": "vetor"}]},
-            {"id": "m5-16", "speaker": "aluno", "text": "Mas o aterro controlado cobre o lixo com terra. Então ele é adequado, né?", "cues": [{"word": "terra", "target": "cover"}]},
-            {"id": "m5-17", "speaker": "professor", "text": "Essa é a pegadinha clássica. O aterro controlado só esconde o lixo; sem manta e sem tratamento do chorume, continua contaminando. É inadequado.", "cues": [{"word": "esconde", "target": "leak2"}, {"word": "inadequado", "target": "inad"}]},
-            {"id": "m5-18", "speaker": "professor", "text": "O aterro sanitário é obra de engenharia: argila compactada e manta impermeável, drenagem e tratamento do chorume, e captação do metano.", "cues": [{"word": "manta", "target": "manta"}, {"word": "drenagem", "target": "dreno"}, {"word": "captação", "target": "capta"}]},
-            {"id": "m5-19", "speaker": "professor", "text": "Tem ainda cobertura diária em camadas e poços de monitoramento. É a única forma adequada de disposição final.", "cues": [{"word": "monitoramento", "target": "monitor"}, {"word": "adequada", "target": "ok"}]}
+            {
+              "id": "m5-22",
+              "speaker": "professor",
+              "text": "Camada-chave do aterro industrial?",
+              "cues": [
+                {
+                  "word": "aterro",
+                  "target": "j1"
+                }
+              ]
+            },
+            {
+              "id": "m5-23",
+              "speaker": "professor",
+              "text": "Impermeabilização e coleta de chorume.",
+              "cues": [
+                {
+                  "word": "Impermeabilização",
+                  "target": "j1",
+                  "action": "solve"
+                }
+              ]
+            },
+            {
+              "id": "m5-24",
+              "speaker": "professor",
+              "text": "Como se destrói o clorado?",
+              "cues": [
+                {
+                  "word": "destrói",
+                  "target": "j2"
+                }
+              ]
+            },
+            {
+              "id": "m5-25",
+              "speaker": "professor",
+              "text": "Por incineração controlada de alta temperatura.",
+              "cues": [
+                {
+                  "word": "incineração",
+                  "target": "j2",
+                  "action": "solve"
+                }
+              ]
+            },
+            {
+              "id": "m5-26",
+              "speaker": "professor",
+              "text": "Primeira medida de descontaminação?",
+              "cues": [
+                {
+                  "word": "Primeira",
+                  "target": "j3"
+                }
+              ]
+            },
+            {
+              "id": "m5-27",
+              "speaker": "professor",
+              "text": "Conter, para não espalhar.",
+              "cues": [
+                {
+                  "word": "Conter",
+                  "target": "j3",
+                  "action": "solve"
+                }
+              ]
+            }
           ]
         },
         {
           "id": "m5s6",
-          "bloom": "Compreender",
+          "bloom": "Avaliar",
           "visual": {
-            "type": "cards", "heading": "Chorume, metano e compostagem", "columns": 3,
-            "items": [
-              {"id": "c1", "title": "Chorume", "body": "líquido escuro da umidade do lixo e da chuva; alta carga orgânica e amônia", "icon": "drop"},
-              {"id": "c2", "title": "Metano", "body": "decomposição sem oxigênio; inflamável e gás de efeito estufa", "icon": "fire"},
-              {"id": "c3", "title": "Compostagem", "body": "decomposição aeróbia controlada dos orgânicos → adubo (evitar carne, laticínios, gordura)", "icon": "leaf"}
+            "type": "quote",
+            "text": "Conter, remover, tratar e monitorar: o solo contaminado é reservatório de longa duração.",
+            "highlights": [
+              "Conter",
+              "monitorar"
             ]
           },
           "lines": [
-            {"id": "m5-20", "speaker": "professor", "text": "O chorume é um líquido escuro, formado pela umidade do lixo e pela chuva, com alta carga orgânica e amônia.", "cues": [{"word": "chorume", "target": "c1"}]},
-            {"id": "m5-21", "speaker": "professor", "text": "O metano é produzido na decomposição sem oxigênio. É inflamável e é gás de efeito estufa.", "cues": [{"word": "metano", "target": "c2"}]},
-            {"id": "m5-22", "speaker": "professor", "text": "Já a compostagem é a decomposição controlada, com oxigênio, dos orgânicos, e gera adubo. Os orgânicos são a fração que mais atrai moscas e ratos.", "cues": [{"word": "compostagem", "target": "c3"}]}
-          ]
-        },
-        {
-          "id": "m5s7",
-          "bloom": "Lembrar",
-          "visual": {
-            "type": "cards", "heading": "Coleta seletiva: cores da Resolução Conama 275/2001", "columns": 6,
-            "items": [
-              {"id": "azul", "title": "Azul", "body": "papel", "swatch": "#2F7DE1", "icon": "recycle"},
-              {"id": "vermelho", "title": "Vermelho", "body": "plástico", "swatch": "#E63946", "icon": "recycle"},
-              {"id": "verde", "title": "Verde", "body": "vidro", "swatch": "#2A9D57", "icon": "recycle"},
-              {"id": "amarelo", "title": "Amarelo", "body": "metal", "swatch": "#F4C430", "icon": "recycle"},
-              {"id": "marrom", "title": "Marrom", "body": "orgânico", "swatch": "#8B5A2B", "icon": "leaf"},
-              {"id": "cinza", "title": "Cinza", "body": "não reciclável", "swatch": "#8D99AE", "icon": "trash"}
-            ],
-            "chips": [{"id": "coop", "text": "Separação na fonte, de preferência com cooperativas de catadores"}]
-          },
-          "lines": [
-            {"id": "m5-23", "speaker": "professor", "text": "Na coleta seletiva, a resolução do Conama define as cores das lixeiras.", "cues": []},
-            {"id": "m5-24", "speaker": "professor", "text": "Azul para papel, vermelho para plástico, verde para vidro e amarelo para metal.", "cues": [{"word": "Azul", "target": "azul"}, {"word": "vermelho", "target": "vermelho"}, {"word": "verde", "target": "verde"}, {"word": "amarelo", "target": "amarelo"}]},
-            {"id": "m5-25", "speaker": "professor", "text": "Marrom para orgânico e cinza para o que não é reciclável. E o ideal é fazer isso junto com as cooperativas de catadores.", "cues": [{"word": "Marrom", "target": "marrom"}, {"word": "cinza", "target": "cinza"}, {"word": "cooperativas", "target": "coop"}]}
-          ]
-        },
-        {
-          "id": "m5s8",
-          "bloom": "Aplicar",
-          "visual": {
-            "type": "compare", "heading": "Prevenção no entorno da casa",
-            "left": {"id": "left", "title": "Vetores e peçonhentos", "sub": "o que orientar na visita domiciliar", "color": "#7BD389", "items": [
-              {"id": "l1", "text": "Tirar lixo e entulho do entorno da casa"},
-              {"id": "l2", "text": "Recipientes de boca para baixo"},
-              {"id": "l3", "text": "Vedar ralos e frestas"},
-              {"id": "l4", "text": "Sacudir roupas e calçados antes de usar"},
-              {"id": "l5", "text": "Não queimar lixo", "bad": true}
-            ]},
-            "right": {"id": "right", "title": "Leptospirose", "sub": "liga lixo e drenagem", "color": "#FFB703", "items": [
-              {"id": "r1", "text": "Urina do rato contamina a água da enchente"},
-              {"id": "r2", "text": "Leptospira entra pela pele lesada ou mucosas"},
-              {"id": "r3", "text": "Síndrome de Weil: icterícia, insuficiência renal e hemorragia pulmonar"}
-            ]}
-          },
-          "lines": [
-            {"id": "m5-26", "speaker": "professor", "text": "Para prevenir vetores e peçonhentos: tire lixo e entulho do entorno da casa e guarde recipientes de boca para baixo.", "cues": [{"word": "prevenir", "target": "left"}, {"word": "entulho", "target": "l1"}, {"word": "recipientes", "target": "l2"}]},
-            {"id": "m5-27", "speaker": "professor", "text": "Vede ralos e frestas, sacuda roupas e calçados antes de usar, e nunca queime lixo.", "cues": [{"word": "ralos", "target": "l3"}, {"word": "sacuda", "target": "l4"}, {"word": "queime", "target": "l5"}]},
-            {"id": "m5-28", "speaker": "aluno", "text": "E a leptospirose, onde entra?", "cues": []},
-            {"id": "m5-29", "speaker": "professor", "text": "Ela liga o lixo à drenagem. A urina do rato contamina a água da enchente, e a Leptospira entra pela pele lesada ou pelas mucosas.", "cues": [{"word": "liga", "target": "right"}, {"word": "urina", "target": "r1"}, {"word": "pele", "target": "r2"}]},
-            {"id": "m5-30", "speaker": "professor", "text": "A forma grave, a síndrome de Weil, une icterícia, insuficiência renal e hemorragia pulmonar.", "cues": [{"word": "Weil", "target": "r3"}]}
-          ]
-        },
-        {
-          "id": "m5s9",
-          "bloom": "Avaliar",
-          "visual": {
-            "type": "quiz", "level": "Avaliar",
-            "question": "A prefeitura propõe trocar o lixão por um aterro controlado, apenas cobrindo o lixo com terra. Avalie a medida.",
-            "options": [
-              {"id": "a", "text": "Adequada: a cobertura elimina o risco à saúde"},
-              {"id": "b", "text": "Inadequada: sem impermeabilização e tratamento do chorume, a contaminação continua"},
-              {"id": "c", "text": "Adequada, desde que haja coleta seletiva"},
-              {"id": "d", "text": "Inadequada apenas por causa do metano"}
-            ],
-            "correct": "b",
-            "explanation": "Terra reduz vetores, mas o chorume segue infiltrando. Adequado: aterro sanitário + coleta seletiva + compostagem."
-          },
-          "lines": [
-            {"id": "m5-31", "speaker": "professor", "text": "Desafio de avaliação. A prefeitura quer trocar o lixão por um aterro controlado, cobrindo o lixo com terra. Essa medida é adequada?", "cues": [{"word": "Desafio", "target": "question"}, {"word": "medida", "target": "options"}]},
-            {"id": "m5-q1", "speaker": "pausa", "text": "", "pauseMs": 7000, "cues": []},
-            {"id": "m5-32", "speaker": "aluno", "text": "Acho que é inadequada, porque ainda não tem manta nem tratamento do chorume.", "cues": [{"word": "inadequada", "target": "b", "action": "pick"}]},
-            {"id": "m5-33", "speaker": "professor", "text": "Perfeito. Cobrir com terra reduz vetores, mas o chorume continua infiltrando. O adequado é o aterro sanitário, com coleta seletiva e compostagem.", "cues": [{"word": "Perfeito", "target": "answer"}, {"word": "chorume", "target": "explanation"}]}
-          ]
-        },
-        {
-          "id": "m5s10",
-          "bloom": "Analisar",
-          "visual": {"type": "quote", "text": "O lixo conecta quase todos os objetivos: cria o Aedes, atrai barata e rato, traz escorpião e serpente, e o chorume contamina a água.", "highlights": ["lixo", "Aedes", "escorpião", "serpente", "chorume"]},
-          "lines": [
-            {"id": "m5-34", "speaker": "professor", "text": "O lixo é o ponto que conecta quase todos os objetivos. Ele cria o Aedes, atrai barata e rato, que trazem escorpião e serpente, e o chorume pode contaminar a água que bebemos.", "cues": [{"word": "conecta", "target": "quote"}]}
+            {
+              "id": "m5-28",
+              "speaker": "professor",
+              "text": "Frase-chave: conter, remover, tratar e monitorar.",
+              "cues": [
+                {
+                  "word": "Conter",
+                  "target": "quote"
+                }
+              ]
+            }
           ]
         }
       ]
@@ -1033,88 +3087,405 @@
       "id": "m6",
       "number": 6,
       "title": "Caso integrador",
-      "subtitle": "Analisar, avaliar e criar",
-      "color": "#FFD166",
+      "subtitle": "Juntar tudo (nível Criar)",
+      "color": "#FF9F1C",
       "scenes": [
         {
           "id": "m6s1",
           "bloom": "Analisar",
-          "visual": {"type": "opener", "kicker": "Módulo 6", "title": "Caso integrador", "subtitle": "Uma comunidade, quatro pacientes, um raciocínio", "icon": "people"},
+          "visual": {
+            "type": "profile",
+            "animal": "Vila do Canal",
+            "genus": "comunidade rural exposta",
+            "icon": "house",
+            "rows": [
+              {
+                "id": "p1",
+                "label": "História",
+                "text": "Décadas de uso de organoclorado na lavoura."
+              },
+              {
+                "id": "p2",
+                "label": "Trabalhador",
+                "text": "Tremor e uma convulsão após pulverizar sem EPI."
+              },
+              {
+                "id": "p3",
+                "label": "Ambiente",
+                "text": "Solo e poço com resíduo; peixe do rio contaminado."
+              },
+              {
+                "id": "key",
+                "label": "Tarefa",
+                "text": "Montar o raciocínio do agente ao ambiente."
+              }
+            ]
+          },
           "lines": [
-            {"id": "m6-01", "speaker": "professor", "text": "Último módulo: vamos juntar tudo num caso, como numa questão de prova.", "cues": [{"word": "juntar", "target": "title"}, {"word": "caso", "target": "subtitle"}]}
+            {
+              "id": "m6-01",
+              "speaker": "professor",
+              "text": "Vamos juntar tudo num caso. Uma comunidade rural com longo uso de clorado.",
+              "cues": [
+                {
+                  "word": "caso",
+                  "target": "p1"
+                }
+              ]
+            },
+            {
+              "id": "m6-02",
+              "speaker": "professor",
+              "text": "Um trabalhador chega com tremor e uma convulsão, depois de pulverizar sem proteção.",
+              "cues": [
+                {
+                  "word": "trabalhador",
+                  "target": "p2"
+                }
+              ]
+            },
+            {
+              "id": "m6-03",
+              "speaker": "professor",
+              "text": "E o solo, o poço e o peixe do rio estão contaminados.",
+              "cues": [
+                {
+                  "word": "solo",
+                  "target": "p3"
+                }
+              ]
+            },
+            {
+              "id": "m6-04",
+              "speaker": "aluno",
+              "text": "Parece a aula inteira dentro de uma vila só.",
+              "cues": []
+            },
+            {
+              "id": "m6-05",
+              "speaker": "professor",
+              "text": "É a ideia. Sua tarefa é montar o raciocínio, do agente ao ambiente.",
+              "cues": [
+                {
+                  "word": "tarefa",
+                  "target": "key"
+                }
+              ]
+            }
           ]
         },
         {
           "id": "m6s2",
-          "bloom": "Analisar",
+          "bloom": "Criar",
           "visual": {
-            "type": "cards", "heading": "Comunidade às margens de um córrego, ao lado de um lixão", "columns": 4,
-            "badge": "Poço raso perto da fossa · lixo acumulado · enchentes",
-            "items": [
-              {"id": "c1", "title": "Lucas, 2 anos", "body": "diarreia com gordura, distensão abdominal, não ganha peso", "icon": "child", "answer": "Giardíase · EPF seriado · metronidazol · ferver ou filtrar"},
-              {"id": "c2", "title": "Vizinha com HIV", "body": "CD4 de 80; diarreia aquosa há 2 meses", "icon": "cell", "answer": "Criptosporidiose · Ziehl-Neelsen modificado · TARV"},
-              {"id": "c3", "title": "Adolescente", "body": "após enchente: febre, dor na panturrilha, icterícia", "icon": "rain", "answer": "Leptospirose · risco de síndrome de Weil"},
-              {"id": "c4", "title": "Criança no quintal", "body": "picada no entulho: dor intensa e vômitos repetidos", "icon": "scorpion", "answer": "Escorpionismo grave · soro antiescorpiônico · monitorizar"}
+            "type": "flow",
+            "layout": "hub",
+            "heading": "Mapa mental do caso",
+            "inward": true,
+            "nodes": [
+              {
+                "id": "mh",
+                "label": "Vila contaminada",
+                "sub": "um caso, seis objetivos",
+                "icon": "house"
+              },
+              {
+                "id": "mn1",
+                "label": "Agente",
+                "sub": "organoclorado proibido",
+                "icon": "molecule"
+              },
+              {
+                "id": "mn2",
+                "label": "Exposição",
+                "sub": "pele sem EPI; cinética lenta",
+                "icon": "drop"
+              },
+              {
+                "id": "mn3",
+                "label": "Mecanismo",
+                "sub": "sódio e GABA; tremor e convulsão",
+                "icon": "neuron"
+              },
+              {
+                "id": "mn4",
+                "label": "Determinação",
+                "sub": "DDE no soro; notificar",
+                "icon": "magnify"
+              },
+              {
+                "id": "mn5",
+                "label": "Ambiente",
+                "sub": "conter, tratar, monitorar",
+                "icon": "globe"
+              }
             ]
           },
           "lines": [
-            {"id": "m6-02", "speaker": "professor", "text": "Imagine uma comunidade às margens de um córrego, ao lado de um lixão. As casas têm poço raso perto da fossa.", "cues": [{"word": "poço", "target": "badge"}]},
-            {"id": "m6-03", "speaker": "professor", "text": "Lucas, de dois anos, tem diarreia com gordura, barriga distendida e não ganha peso.", "cues": [{"word": "Lucas", "target": "c1"}]},
-            {"id": "m6-04", "speaker": "aluno", "text": "Gordura nas fezes e má absorção... isso é Giardia!", "cues": []},
-            {"id": "m6-05", "speaker": "professor", "text": "Isso mesmo. Exame de fezes, em mais de uma amostra, e metronidazol. E a água deve ser fervida ou filtrada.", "cues": [{"word": "mesmo", "target": "c1", "action": "solve"}]},
-            {"id": "m6-06", "speaker": "professor", "text": "Uma vizinha com HIV e CD4 de oitenta tem diarreia aquosa há dois meses.", "cues": [{"word": "vizinha", "target": "c2"}]},
-            {"id": "m6-07", "speaker": "aluno", "text": "Agora eu penso em Cryptosporidium, porque a resposta Th1 dela está baixa.", "cues": []},
-            {"id": "m6-08", "speaker": "professor", "text": "Excelente conexão com a imunologia. Peça Ziehl-Neelsen modificado, e a peça-chave do tratamento é a terapia antirretroviral.", "cues": [{"word": "Excelente", "target": "c2", "action": "solve"}]},
-            {"id": "m6-09", "speaker": "professor", "text": "Depois de uma enchente, um adolescente tem febre, dor na panturrilha e fica amarelado.", "cues": [{"word": "enchente", "target": "c3"}]},
-            {"id": "m6-10", "speaker": "aluno", "text": "Dengue? Ele está com febre e dor muscular.", "cues": []},
-            {"id": "m6-11", "speaker": "professor", "text": "Pense de novo na enchente e na icterícia. Isso sugere leptospirose, pela urina de rato na água. Cuidado com a síndrome de Weil.", "cues": [{"word": "leptospirose", "target": "c3", "action": "solve"}]},
-            {"id": "m6-12", "speaker": "professor", "text": "E uma criança, picada no quintal cheio de entulho, tem dor intensa e vômitos repetidos.", "cues": [{"word": "entulho", "target": "c4"}]},
-            {"id": "m6-13", "speaker": "aluno", "text": "Escorpião! E o vômito mostra que é grave, então precisa de soro.", "cues": []},
-            {"id": "m6-14", "speaker": "professor", "text": "Correto. Soro antiescorpiônico e monitorização, porque crianças têm maior risco de choque e edema pulmonar.", "cues": [{"word": "Correto", "target": "c4", "action": "solve"}]}
+            {
+              "id": "m6-06",
+              "speaker": "professor",
+              "text": "Montamos o mapa mental. No centro, a vila; em volta, os objetivos.",
+              "cues": [
+                {
+                  "word": "centro",
+                  "target": "mh"
+                }
+              ]
+            },
+            {
+              "id": "m6-07",
+              "speaker": "professor",
+              "text": "O agente é um clorado proibido. A exposição foi dérmica, sem equipamento.",
+              "cues": [
+                {
+                  "word": "agente",
+                  "target": "mn1"
+                },
+                {
+                  "word": "exposição",
+                  "target": "mn2"
+                }
+              ]
+            },
+            {
+              "id": "m6-08",
+              "speaker": "professor",
+              "text": "O mecanismo explica o tremor e a convulsão: sódio e gaba.",
+              "cues": [
+                {
+                  "word": "mecanismo",
+                  "target": "mn3"
+                }
+              ]
+            },
+            {
+              "id": "m6-09",
+              "speaker": "professor",
+              "text": "A determinação pede dê-dê-é no soro e notificação no sinan.",
+              "cues": [
+                {
+                  "word": "determinação",
+                  "target": "mn4"
+                }
+              ]
+            },
+            {
+              "id": "m6-10",
+              "speaker": "aluno",
+              "text": "E o ambiente fecha: conter o solo, tratar e monitorar.",
+              "cues": [
+                {
+                  "word": "ambiente",
+                  "target": "mn5"
+                }
+              ]
+            },
+            {
+              "id": "m6-11",
+              "speaker": "professor",
+              "text": "Isso é pensar como médico de família e como vigilância ao mesmo tempo.",
+              "cues": []
+            }
           ]
         },
         {
           "id": "m6s3",
           "bloom": "Avaliar",
           "visual": {
-            "type": "quiz", "level": "Avaliar",
-            "question": "Qual intervenção teria o maior impacto sobre todos esses casos ao mesmo tempo?",
+            "type": "quiz",
+            "level": "Avaliar",
+            "question": "Na vila, qual intervenção tem o maior impacto coletivo a longo prazo?",
             "options": [
-              {"id": "a", "text": "Albendazol em massa para a comunidade"},
-              {"id": "b", "text": "Antibiótico para todas as diarreias"},
-              {"id": "c", "text": "Saneamento: água, esgoto, resíduos e drenagem"},
-              {"id": "d", "text": "Soro antiveneno em todas as UBS"}
+              {
+                "id": "a",
+                "text": "Tratar só o trabalhador doente"
+              },
+              {
+                "id": "b",
+                "text": "Dar soro antídoto a todos"
+              },
+              {
+                "id": "c",
+                "text": "Conter a fonte, vigiar e proteger a população"
+              },
+              {
+                "id": "d",
+                "text": "Trocar o poço de lugar"
+              }
             ],
             "correct": "c",
-            "explanation": "Tratamentos resolvem episódios; o saneamento corta a origem comum (prevenção primária coletiva)."
+            "explanation": "O maior impacto é coletivo e duradouro: conter a fonte, vigiar e prevenir. Não há antídoto específico; tratar só um caso não protege a vila."
           },
           "lines": [
-            {"id": "m6-15", "speaker": "professor", "text": "Desafio final. Qual intervenção teria o maior impacto sobre todos esses casos ao mesmo tempo?", "cues": [{"word": "Desafio", "target": "question"}, {"word": "impacto", "target": "options"}]},
-            {"id": "m6-q1", "speaker": "pausa", "text": "", "pauseMs": 7000, "cues": []},
-            {"id": "m6-16", "speaker": "aluno", "text": "Eu escolheria o saneamento, com os quatro eixos.", "cues": [{"word": "saneamento", "target": "c", "action": "pick"}]},
-            {"id": "m6-17", "speaker": "professor", "text": "É isso. Os tratamentos resolvem cada episódio, mas só o saneamento corta a origem comum de todos eles.", "cues": [{"word": "isso", "target": "answer"}, {"word": "origem", "target": "explanation"}]}
+            {
+              "id": "m6-12",
+              "speaker": "professor",
+              "text": "Último desafio. Qual intervenção tem o maior impacto coletivo?",
+              "cues": [
+                {
+                  "word": "desafio",
+                  "target": "__tag"
+                },
+                {
+                  "word": "impacto",
+                  "target": "question"
+                }
+              ]
+            },
+            {
+              "id": "m6-13",
+              "speaker": "professor",
+              "text": "Pense no que protege a vila inteira, não só um paciente.",
+              "cues": [
+                {
+                  "word": "vila",
+                  "target": "options"
+                }
+              ]
+            },
+            {
+              "id": "m6-pause",
+              "speaker": "pausa",
+              "pauseMs": 7000,
+              "cues": []
+            },
+            {
+              "id": "m6-14",
+              "speaker": "aluno",
+              "text": "Fico tentada a dar soro antídoto a todos.",
+              "cues": [
+                {
+                  "word": "antídoto",
+                  "target": "b"
+                }
+              ]
+            },
+            {
+              "id": "m6-15",
+              "speaker": "professor",
+              "text": "Mas não há antídoto específico para o clorado. O cuidado é de suporte.",
+              "cues": []
+            },
+            {
+              "id": "m6-16",
+              "speaker": "professor",
+              "text": "O maior impacto é conter a fonte, vigiar e proteger a população.",
+              "cues": [
+                {
+                  "word": "conter",
+                  "target": "answer"
+                },
+                {
+                  "word": "proteger",
+                  "target": "explanation"
+                }
+              ]
+            }
           ]
         },
         {
           "id": "m6s4",
-          "bloom": "Criar",
+          "bloom": "Avaliar",
           "visual": {
-            "type": "flow", "layout": "hub", "heading": "Crie o seu mapa mental",
-            "nodes": [
-              {"id": "center", "label": "Ambiente sem saneamento", "sub": "a origem comum", "icon": "house"},
-              {"id": "s1", "label": "Água e esgoto", "sub": "feco-orais: cólera, Giardia, Cryptosporidium, Ascaris", "icon": "pipe"},
-              {"id": "s2", "label": "Água parada", "sub": "Aedes → dengue", "icon": "mosquito"},
-              {"id": "s3", "label": "Lixo e entulho", "sub": "baratas e ratos → peçonhentos", "icon": "trash"},
-              {"id": "s4", "label": "Enchente", "sub": "urina de rato → leptospirose", "icon": "rain"},
-              {"id": "s5", "label": "Resposta do corpo", "sub": "Th1 · Th2 · IgA secretória", "icon": "shield"}
+            "type": "cards",
+            "heading": "Bioética e justiça ambiental",
+            "badge": "Por que isso importa",
+            "columns": 3,
+            "items": [
+              {
+                "id": "z1",
+                "title": "Risco desigual",
+                "body": "Recai sobre quem trabalha e vive no campo.",
+                "icon": "people",
+                "swatch": "#FF5C7A"
+              },
+              {
+                "id": "z2",
+                "title": "Precaução",
+                "body": "Na dúvida sobre o dano, proteger primeiro.",
+                "icon": "shield",
+                "swatch": "#3DDC97"
+              },
+              {
+                "id": "z3",
+                "title": "Herança longa",
+                "body": "O resíduo passa às próximas gerações.",
+                "icon": "child",
+                "swatch": "#FFB703"
+              }
             ]
           },
           "lines": [
-            {"id": "m6-18", "speaker": "professor", "text": "Agora crie o seu mapa mental. No centro, o ambiente sem saneamento.", "cues": [{"word": "centro", "target": "center"}]},
-            {"id": "m6-19", "speaker": "professor", "text": "Água e esgoto levam às doenças fecal-orais. Água parada cria o Aedes. Lixo e entulho trazem os peçonhentos. Enchente traz a leptospirose.", "cues": [{"word": "esgoto", "target": "s1"}, {"word": "parada", "target": "s2"}, {"word": "Lixo", "target": "s3"}, {"word": "Enchente", "target": "s4"}]},
-            {"id": "m6-20", "speaker": "professor", "text": "E o corpo responde conforme o parasita: Th1, Th2 ou imunoglobulina A.", "cues": [{"word": "responde", "target": "s5"}]},
-            {"id": "m6-21", "speaker": "aluno", "text": "Agora sim, tudo faz sentido junto. A água e o lixo são o fio da história.", "cues": []},
-            {"id": "m6-22", "speaker": "professor", "text": "Exatamente. Revise as tabelas, refaça os desafios com calma, e boa prova!", "cues": [{"word": "Exatamente", "target": "center", "action": "highlight"}]}
+            {
+              "id": "m6-17",
+              "speaker": "professor",
+              "text": "Há um fundo ético aqui que a prova pode cobrar.",
+              "cues": [
+                {
+                  "word": "ético",
+                  "target": "__heading"
+                }
+              ]
+            },
+            {
+              "id": "m6-18",
+              "speaker": "professor",
+              "text": "O risco recai sobre os mais vulneráveis, quem vive e trabalha no campo.",
+              "cues": [
+                {
+                  "word": "risco",
+                  "target": "z1"
+                }
+              ]
+            },
+            {
+              "id": "m6-19",
+              "speaker": "professor",
+              "text": "Por isso vale o princípio da precaução: na dúvida, proteger.",
+              "cues": [
+                {
+                  "word": "precaução",
+                  "target": "z2"
+                }
+              ]
+            },
+            {
+              "id": "m6-20",
+              "speaker": "professor",
+              "text": "E o resíduo é uma herança longa, que passa às próximas gerações.",
+              "cues": [
+                {
+                  "word": "herança",
+                  "target": "z3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "m6s5",
+          "bloom": "Criar",
+          "visual": {
+            "type": "quote",
+            "text": "Um veneno proibido ainda adoece pessoas e ambiente: prevenir e vigiar é tratar a causa.",
+            "highlights": [
+              "prevenir",
+              "vigiar"
+            ]
+          },
+          "lines": [
+            {
+              "id": "m6-21",
+              "speaker": "professor",
+              "text": "Frase final: prevenir e vigiar é tratar a causa. Bons estudos!",
+              "cues": [
+                {
+                  "word": "prevenir",
+                  "target": "quote"
+                }
+              ]
+            }
           ]
         }
       ]
