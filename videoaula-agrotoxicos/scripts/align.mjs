@@ -57,20 +57,43 @@ const whisperWords = async (line) => {
 	return words;
 };
 
-const findCueMs = (words, cue, lineId) => {
+const findInWords = (words, cue) => {
 	const target = normalize(cue.word);
 	const wanted = cue.n ?? 1;
 	let seen = 0;
 	for (const w of words) {
 		if (normalize(w.text) === target && ++seen === wanted) return w.startMs;
 	}
-	// Whisper pode grafar diferente: aceita a palavra mais parecida.
+	// Whisper pode quebrar uma palavra em tokens: tenta juntar até 3 tokens seguidos.
+	seen = 0;
+	for (let i = 0; i < words.length; i++) {
+		let joined = '';
+		for (let k = 0; k < 3 && i + k < words.length; k++) {
+			joined += normalize(words[i + k].text);
+			if (joined === target && ++seen === wanted) return words[i].startMs;
+		}
+	}
+	// Grafia aproximada: aceita a palavra mais parecida (edit distance).
 	let best = null;
 	for (const w of words) {
 		const dist = levenshtein(normalize(w.text), target);
 		if (dist <= Math.max(1, Math.floor(target.length / 4)) && (!best || dist < best.dist)) best = {dist, ms: w.startMs};
 	}
-	if (best) return best.ms;
+	return best ? best.ms : null;
+};
+
+// Usa o tempo do Whisper; se não achar a palavra-gatilho, cai no tempo do TTS
+// (mesmo áudio, mesma linha do tempo) em vez de abortar.
+const findCueMs = (words, cue, lineId, fallbackWords) => {
+	const w = findInWords(words, cue);
+	if (w !== null) return w;
+	if (fallbackWords) {
+		const f = findInWords(fallbackWords, cue);
+		if (f !== null) {
+			console.warn(`  cue "${cue.word}" (${lineId}): Whisper não achou, usando tempo do TTS`);
+			return f;
+		}
+	}
 	throw new Error(`Cue "${cue.word}" não encontrado na fala ${lineId}`);
 };
 
@@ -97,7 +120,7 @@ for (const mod of roteiro.modules) {
 				target: cue.target,
 				action: cue.action ?? 'show',
 				word: cue.word,
-				ms: findCueMs(words, cue, line.id),
+				ms: findCueMs(words, cue, line.id, tts.words),
 			}));
 			lines.push({id: line.id, speaker: line.speaker, audio: `audio/${line.id}.mp3`, durationMs: tts.durationMs, words, cues});
 			totalMs += tts.durationMs;
